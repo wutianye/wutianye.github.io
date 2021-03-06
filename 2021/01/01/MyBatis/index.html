@@ -1,0 +1,594 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="java">
+  <meta name="author" content="吴天野">
+  <meta name="keywords" content="">
+  <title>mybatis - 吴天野的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>吴天野的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      吴天野
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-01-01 20:30" pubdate>
+        2021年1月1日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      18
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">mybatis</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="Mybatis知识点总结"><a href="#Mybatis知识点总结" class="headerlink" title="Mybatis知识点总结"></a>Mybatis知识点总结</h1><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>MyBatis 是一个可以自定义 SQL、存储过程和高级映射的持久层框架</p>
+<h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>MyBatis 的缓存分为一级缓存和二级缓存。<img src="/img/mybatis1.png" srcset="/img/loading.gif"></p>
+<p>一级缓存放在 session 里面,默认就有。失效场景：①两次查询间使用插入    ②不同session    ③where条件不同的查询语句。源码在BaseExecutor中。Map存储。</p>
+<p>二级缓存存放在它的命名空间里，默认是不打开的。开启二级缓存后，会使用 CachingExecutor 装饰 Executor，进入一级缓存的查询流程前，先在CachingExecutor 进行二级缓存的查询。当二级缓存开启后，同一个命名空间(namespace) 所有的操作语句，都影响着一个<strong>共同的 cache</strong>，也就是二级缓存被多个 SqlSession 共享，是一个<strong>全局的变量</strong>。当开启缓存后，数据的查询执行的流程就是 二级缓存 -&gt; 一级缓存 -&gt; 数据库。使用二级缓存属性类需要实现 Serializable 序列化 接口(可用来保存对象的状态)，可在它的映射文件中配置cache标签。</p>
+<pre><code class="hljs xml"><span class="hljs-comment">&lt;!--开启二级缓存--&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">settings</span>&gt;</span> 
+  <span class="hljs-tag">&lt;<span class="hljs-name">setting</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;cacheEnabled&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span> 
+<span class="hljs-tag">&lt;/<span class="hljs-name">settings</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--使用二级缓存   Mapper接口--&gt;</span> 
+@CacheNamespace
+
+<span class="hljs-comment">&lt;!--使用二级缓存   Mapper.xml--&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">cache</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">cache</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--单个语句配置二级缓存   Mapper.xml--&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">useCache</span>=<span class="hljs-string">&quot;false&quot;</span></span>
+<span class="hljs-tag"></span>
+&lt;!--单个语句配置二级缓存   Mapper接口--&gt; 
+@Options(useCache = false)
+
+<span class="hljs-comment">&lt;!--单个语句配置刷新缓存   Mapper.xml--&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">flushCache</span>=<span class="hljs-string">&quot;true&quot;</span></span>
+<span class="hljs-tag"></span>
+&lt;!--配置redis分布式缓存   Mapper.xml--&gt; 
+<span class="hljs-tag">&lt;<span class="hljs-name">cache</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;org.mybatis.caches.redis.RedisCache&quot;</span> /&gt;</span></code></pre>
+
+<div class="note note-danger">
+            <p>多表操作会影响二级缓存，可能会得到脏数据。 用cache-ref标签 指向另一个命名空间能解决</p>
+          </div>
+
+<p>二级缓存是表级缓存，开销大，没有一级缓存直接使用 HashMap 来存储的效率更高，所以<strong>二级缓存并不推荐使用</strong>。</p>
+<h3 id="mybatis插件"><a href="#mybatis插件" class="headerlink" title="mybatis插件"></a>mybatis插件</h3><ul>
+<li><strong>运行原理</strong></li>
+</ul>
+<p>Mybatis 通过动态代理，为需要拦截的接口生成代理对象以实现接口方法拦截功能</p>
+<p>MyBatis允许在已映射语句执行过程中的某一点进行拦截调用，默认情况下MyBatis允许使用插件来拦截的四大对象：</p>
+<ol>
+<li>Executor: 执行增删改查操作</li>
+<li>StatementHandler: 处理SQL预编译，设置参数等相关工作</li>
+<li>ParameterHandler: 设置预编译参数用的</li>
+<li>ResultSetHandler: 处理结果集</li>
+</ol>
+<p>每当执行这 4 种接口对象的方法时，就会进入拦截方法，具体就是 InvocationHandler 的 invoke()方法</p>
+<ul>
+<li><strong>自己编写</strong></li>
+</ul>
+<p>实现 Mybatis 的 Interceptor 接口并复写 intercept()方法</p>
+<pre><code class="hljs java"><span class="hljs-comment">// ExamplePlugin.java</span>
+<span class="hljs-meta">@Intercepts(&#123;@Signature(</span>
+<span class="hljs-meta">  type= Executor.class,</span>
+<span class="hljs-meta">  method = &quot;update&quot;,</span>
+<span class="hljs-meta">  args = &#123;MappedStatement.class,Object.class&#125;)&#125;)</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExamplePlugin</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Interceptor</span> </span>&#123;
+  <span class="hljs-keyword">private</span> Properties properties = <span class="hljs-keyword">new</span> Properties();
+  <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">intercept</span><span class="hljs-params">(Invocation invocation)</span> <span class="hljs-keyword">throws</span> Throwable </span>&#123;
+    <span class="hljs-comment">// implement pre processing if need</span>
+    Object returnObject = invocation.proceed();
+    <span class="hljs-comment">// implement post processing if need</span>
+    <span class="hljs-keyword">return</span> returnObject;
+  &#125;
+  <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">plugin</span><span class="hljs-params">(Object target)</span> </span>&#123;
+    <span class="hljs-keyword">return</span> Plugin.wrap(target, <span class="hljs-keyword">this</span>);
+  &#125;
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setProperties</span><span class="hljs-params">(Properties properties)</span> </span>&#123;
+    <span class="hljs-keyword">this</span>.properties = properties;
+  &#125;
+&#125;
+
+</code></pre>
+
+<h3 id="Mybatis-Excutor"><a href="#Mybatis-Excutor" class="headerlink" title="Mybatis  Excutor"></a>Mybatis  Excutor</h3><p>Mybatis 有三种基本的 Executor 执行器，SimpleExecutor、ReuseExecutor、BatchExecutor。1）SimpleExecutor：每执行一次 update 或 select，就开启一个 Statement 对象，用完立刻关闭 Statement 对象。2）ReuseExecutor：执行 update 或 select，以 sql 作为key 查找 Statement 对象，存在就使用，不存在就创建，用完后，不关闭 Statement 对象，而是放置于 Map3）BatchExecutor：完成批处理。</p>
+<h3 id="和-的区别是什么"><a href="#和-的区别是什么" class="headerlink" title="#{}和${}的区别是什么"></a>#{}和${}的区别是什么</h3><p>1）#{}是预编译处理，${}是字符串替换。 </p>
+<p>2）Mybatis 在处理#{}时，会将 sql 中的#{}替换为?号，调用 PreparedStatement 的 set 方法 来赋值； </p>
+<p>3）Mybatis 在处理${}时，就是把${}替换成变量的值。</p>
+<p> 4）使用#{}可以有效的防止 SQL 注入，提高系统安全性。</p>
+<h3 id="Mybais和Hibernate"><a href="#Mybais和Hibernate" class="headerlink" title="Mybais和Hibernate"></a>Mybais和Hibernate</h3><table>
+<thead>
+<tr>
+<th>Mybais</th>
+<th>Hibernate</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>半自动 ORM 映射工具， 动态sql</td>
+<td>全自动 ORM 映射工具，据对象关系模型直接获取</td>
+</tr>
+<tr>
+<td>简单易学</td>
+<td>学习门槛高，要设计 O/R 映射，在性能和对象模型之间如何权衡</td>
+</tr>
+<tr>
+<td>灵活度高，非常适合对关系数据模型要求不高的软件开发</td>
+<td>Hibernate 对象/关系映射能力强，数据库无关性好，适合关系模型要求高的软件</td>
+</tr>
+</tbody></table>
+<h3 id="接口绑定"><a href="#接口绑定" class="headerlink" title="接口绑定"></a>接口绑定</h3><ol>
+<li>注解绑定</li>
+<li>xml绑定</li>
+</ol>
+<h3 id="Dao工作原理"><a href="#Dao工作原理" class="headerlink" title="Dao工作原理"></a>Dao工作原理</h3><p> jdk 动态代理原理，运行时会为 dao 生成 proxy，代理对象会拦截接口方法，去执行对应的 sql 返回数据。</p>
+<h3 id="延迟加载"><a href="#延迟加载" class="headerlink" title="延迟加载"></a>延迟加载</h3><p>1）Mybatis 仅支持 association 关联对象和 collection 关联集合对象的延迟加载，association指的就是一对一，collection 指的就是一对多查询。在 Mybatis 配置文件中，可以配置是否启用延迟加载 lazyLoadingEnabled=true|false。<br>2）它的原理是，使用 CGLIB 创建目标对象的代理对象，当调用目标方法时，进入拦截器方法，比如调用 a.getB().getName()，拦截器 invoke()方法发现 a.getB()是 null 值，那么就会单独发送事先保存好的查询关联 B 对象的 sql，把 B 查询上来，然后调用 a.setB(b)，于是 a 的对象 b 属性就有值了，接着完成 a.getB().getName()方法的调用。这就是延迟加载的基本原理。</p>
+<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">association</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;user&quot;</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;uid&quot;</span> <span class="hljs-attr">javaType</span>=<span class="hljs-string">&quot;User&quot;</span> <span class="hljs-attr">select</span>=<span class="hljs-string">&quot;cn.ideal.mapper.UserMapper.findById&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">association</span>&gt;</span></code></pre>
+
+
+
+
+
+<h2 id="有趣的用法"><a href="#有趣的用法" class="headerlink" title="有趣的用法"></a>有趣的用法</h2><h3 id="批量插入，返回主键列表"><a href="#批量插入，返回主键列表" class="headerlink" title="批量插入，返回主键列表"></a>批量插入，返回主键列表</h3><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">insert</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;batchInsert&quot;</span> <span class="hljs-attr">parameterType</span>=<span class="hljs-string">&quot;java.util.List&quot;</span> <span class="hljs-attr">useGeneratedKeys</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">keyProperty</span>=<span class="hljs-string">&quot;id&quot;</span> &gt;</span></code></pre>
+
+
+
+
+
+
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><style>
+  /* 只设置  note字体 */
+  .note {
+    font-family: "Microsoft YaHei",Georgia, sans, serif, KaiTi,;
+    font-size: 14px;
+  }
+</style><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>Mybatis缓存 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/cxuanBlog/p/11333021.html">MyBatis 二级缓存全详解 - 程序员cxuan - 博客园 (cnblogs.com)</a>
+<p><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>Mybatis缓存 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/isdxh/p/13963636.html">Mybatis的二级缓存、使用Redis做二级缓存 - 邓晓晖 - 博客园 (cnblogs.com)</a><br><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span>Mybatis延迟加载 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1587223">https://cloud.tencent.com/developer/article/1587223</a><br><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span>Mybatis手写插件 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/259908377#:~:text=MyBatis%E4%BD%BF,%E5%AE%89%E5%85%A8%E9%AB%98%E6%95%88%E7%9A%84%E6%8F%92%E4%BB%B6%E3%80%82">https://zhuanlan.zhihu.com/p/259908377#:~:text=MyBatis%E4%BD%BF,%E5%AE%89%E5%85%A8%E9%AB%98%E6%95%88%E7%9A%84%E6%8F%92%E4%BB%B6%E3%80%82</a><br><a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/01/mysql/">
+                        <span class="hidden-mobile">mysql</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "mybatis&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
