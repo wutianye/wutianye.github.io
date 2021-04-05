@@ -1,0 +1,1348 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="java">
+  <meta name="author" content="吴天野">
+  <meta name="keywords" content="">
+  <title>javal - 吴天野的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>吴天野的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      吴天野
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-01-01 20:30" pubdate>
+        2021年1月1日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      16.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      183
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">javal</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="JAVA基础"><a href="#JAVA基础" class="headerlink" title="JAVA基础"></a>JAVA基础</h1><h2 id="一、Java基本概念"><a href="#一、Java基本概念" class="headerlink" title="一、Java基本概念"></a>一、Java基本概念</h2><h3 id="1-1-Java语言的特点"><a href="#1-1-Java语言的特点" class="headerlink" title="1.1 Java语言的特点"></a>1.1 Java语言的特点</h3><h3 id="1-2-jvm-jdk-jre"><a href="#1-2-jvm-jdk-jre" class="headerlink" title="1.2 jvm jdk jre"></a>1.2 jvm jdk jre</h3><p>Jvm是运行字节码的虚拟机，jvm对于不同系统有特定实现，目的是使用相同字节码能得到相同结果</p>
+<p>字节码 即为.class文件，不面向任何特定的处理器，只面向虚拟机。因此java程序无需重新编译便可在不同系统上运行。</p>
+<h2 id="二、Java基本数据类型"><a href="#二、Java基本数据类型" class="headerlink" title="二、Java基本数据类型"></a>二、Java基本数据类型</h2><h3 id="2-1-基本数据类型"><a href="#2-1-基本数据类型" class="headerlink" title="2.1 基本数据类型"></a>2.1 基本数据类型</h3><table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>包装类型</th>
+<th>位数</th>
+<th>字节</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int</td>
+<td>Interger</td>
+<td>32</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr>
+<td>short</td>
+<td>Short</td>
+<td>16</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>long</td>
+<td>Long</td>
+<td>64</td>
+<td>8</td>
+<td>0L</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>Byte</td>
+<td>8</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>char</td>
+<td>Character</td>
+<td>16</td>
+<td>2</td>
+<td>‘u0000’</td>
+</tr>
+<tr>
+<td>float</td>
+<td>Float</td>
+<td>32</td>
+<td>4</td>
+<td>0f</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Double</td>
+<td>64</td>
+<td>8</td>
+<td>0d</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Boolean</td>
+<td>1</td>
+<td></td>
+<td>false</td>
+</tr>
+</tbody></table>
+<p>StringBuffer  线程安全          性能偏低</p>
+<p>StringBuilder 线程不安全     性能较高</p>
+<h3 id="2-2-自动拆装箱"><a href="#2-2-自动拆装箱" class="headerlink" title="2.2 自动拆装箱"></a>2.2 自动拆装箱</h3><p>装箱：valueOf</p>
+<p>拆箱：xxValue</p>
+<div class="note note-info">
+            <p>当 “==”运算符的两个操作数都是 包装器类型的引用，则是比较指向的是否是同一个对象，而如果其中有一个操作数是表达式（即包含算术运算）则比较的是数值（即会触发自动拆箱的过程）c.equals(a+b)会先触发自动拆箱过程，再触发自动装箱过程</p>
+          </div>
+
+<p>Reference:《阿里巴巴Java开发手册》</p>
+<ul>
+<li>【强制】所有的 POJO 类属性必须使用包装数据类型。</li>
+<li>【强制】RPC 方法的返回值和参数必须使用包装数据类型。</li>
+<li>【推荐】所有的局部变量使用基本数据类型。</li>
+</ul>
+<h3 id="2-3-基本数据类型与常量池"><a href="#2-3-基本数据类型与常量池" class="headerlink" title="2.3 基本数据类型与常量池"></a>2.3 基本数据类型与常量池</h3><p>Byte int short long [-128,127]</p>
+<p>char [0,127]</p>
+<p>Boolean true false</p>
+<h2 id="三、Java语法"><a href="#三、Java语法" class="headerlink" title="三、Java语法"></a>三、Java语法</h2><h3 id="3-1-泛型"><a href="#3-1-泛型" class="headerlink" title="3.1 泛型"></a>3.1 泛型</h3><p>Java 泛型（generics）是 JDK 5 中引入的一个新特性, 泛型提供了<strong>编译时类型安全检测机制</strong>，该机制允许程序员在编译时检测到非法的类型。泛型的本质是参数化类型，也就是说所操作的数据类型被指定为一个参数。</p>
+<p><strong>Java 的泛型是伪泛型，这是因为 Java 在编译期间，所有的泛型信息都会被擦掉，这也就是通常所说类型擦除 。</strong></p>
+<p>关于泛型，？和泛型是非常值得讨论的事情。</p>
+<ul>
+<li>如果<strong>参数之间的类型有依赖关系</strong>，或者返<strong>回值是与参数之间有依赖关系</strong>的。那么就使用<strong>泛型方法</strong></li>
+<li>如果<strong>没有依赖关系</strong>的，就使用<strong>通配符</strong>，通配符会<strong>灵活一些.</strong></li>
+</ul>
+<h3 id="3-2-反射"><a href="#3-2-反射" class="headerlink" title="3.2 反射"></a>3.2 反射</h3><p>JAVA 反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法</p>
+<ul>
+<li><strong>优点：</strong> 运行期类型的判断，动态加载类，提高代码灵活度。</li>
+<li><strong>缺点：</strong> 1,性能瓶颈：反射相当于一系列解释操作，通知 JVM 要做的事情，性能比直接的 java 代码要慢很多。2,安全问题，让我们可以动态操作改变类的属性同时也增加了类的安全隐患。</li>
+</ul>
+<p>本质是  获取Class对象。</p>
+<p>为什么我们需要反射</p>
+<p>反射提供了动态编译，最大程度地支持多态，而多态最大的意义在于降低类的耦合性</p>
+<p>情景一：不得已而为之</p>
+<p>有的类是我们在编写程序的时候无法使用new一个对象来实例化对象的。例如：</p>
+<p>调用的是来自网络的二进制.class文件，而没有其.java代码；<br>注解 - 注解本身仅仅是起到标记作用，它需要利用反射机制，根据注解标记去调用注解解释器，执行行为。如果没有反射机制，注解并不比注释更有用。</p>
+<p>情景二：动态加载（可以最大限度的体现Java的灵活性，并降低类的耦合性：多态）</p>
+<p>有的类可以在用到时再动态加载到jvm中，这样可以减少jvm的启动时间，同时更重要的是可以动态的加载需要的对象（多态）。例如：</p>
+<p>动态代理 - 在切面编程（AOP）中，需要拦截特定的方法，通常，会选择动态代理方式。这时，就需要反射技术来实现了。</p>
+<p>情景三：避免将程序写死到代码里</p>
+<p>因为java代码是先通过编译器将.java文件编译成.class的二进制字节码文件，因此如果我们使用new Person()来实例化对象person会出现的问题就是如果我们希望更换person的实例对象，就要在源代码种更改然后重新编译再运行，但是如果我们将person的实例对象类名等信息编写在配置文件中，利用反射的Class.forName(className)方法来实例化java对象（因为实例化java对象都是根据全限定名查找到jvm内存中的class对象，并根据class对象中的累信息实例化得到java对象，因此xml文件中只要包含了权限定类名就可以通过反射实例化java对象），那么我们就可以更改配置文件，无需重新编译。例如：</p>
+<p>开发通用框架 - 反射最重要的用途就是开发各种通用框架。很多框架（比如 Spring）都是配置化的（比如通过 XML 文件配置 JavaBean、Filter 等），为了保证框架的通用性，它们可能需要根据配置文件加载不同的对象或类，调用不同的方法，这个时候就必须用到反射——运行时动态加载需要加载的对象。</p>
+<h4 id="JDK-动态代理"><a href="#JDK-动态代理" class="headerlink" title="JDK 动态代理"></a>JDK 动态代理</h4><ol>
+<li>定义一个接口及其实现类；</li>
+<li>自定义 <code>InvocationHandler</code> 并重写<code>invoke</code>方法，在 <code>invoke</code> 方法中我们会调用原生方法（被代理类的方法）并自定义一些处理逻辑；</li>
+<li>通过 <code>Proxy.newProxyInstance(ClassLoader loader,Class&lt;?&gt;[] interfaces,InvocationHandler h)</code> 方法创建代理对象；</li>
+</ol>
+<h3 id="3-2-和equals"><a href="#3-2-和equals" class="headerlink" title="3.2 ==和equals"></a>3.2 ==和equals</h3><p><strong>基本数据类型==比较的是值，引用数据类型==比较的是内存地址</strong></p>
+<p><strong><code>equals()</code></strong> : 它的作用也是判断两个对象是否相等，它不能用于比较基本数据类型的变量。<code>equals()</code>方法存在于<code>Object</code>类中</p>
+<p><code>equals()</code> 方法存在两种使用情况：</p>
+<ul>
+<li>情况 1：类没有覆盖 <code>equals()</code>方法。则通过<code>equals()</code>比较该类的两个对象时，等价于通过“==”比较这两个对象。使用的默认是 <code>Object</code>类<code>equals()</code>方法。</li>
+<li>情况 2：类覆盖了 <code>equals()</code>方法。一般，我们都覆盖 <code>equals()</code>方法来两个对象的内容相等；若它们的内容相等，则返回 true(即，认为这两个对象相等)。</li>
+</ul>
+<h3 id="3-4-hashcode和equals"><a href="#3-4-hashcode和equals" class="headerlink" title="3.4 hashcode和equals"></a>3.4 hashcode和equals</h3><p><strong>1)概述</strong></p>
+<p>hashcode和equals都存在于object类中</p>
+<p>hashCode() 在散列表中才有用，在其它情况下没用</p>
+<p>要用到散列表的情况下：</p>
+<ul>
+<li>两个对象相等，哈希值一定相等。</li>
+<li>哈希值相等，两个对象不一定相等  即哈希冲突</li>
+</ul>
+<div class="note note-danger">
+            <p>要注意的是，对于”不会创建类对应的散列表”的情况来说，hashcode和equals没有任何关联，因为根本用不到hashcode</p>
+          </div>
+
+<p><strong>2)为什么要有 hashCode？</strong></p>
+<p>先计算对象的 hashcode 值来判断，相同则再使用equals比较，大大减少了 equals 的次数，相应就大大提高了执行速度</p>
+<p><strong>3)为什么重写 <code>equals</code> 时必须重写 <code>hashCode</code> 方法？</strong></p>
+<p>如果两个对象相等，则 hashcode 一定也是相同的。两个对象相等,对两个对象分别调用 equals 方法都返回 true。但是，两个对象有相同的 hashcode 值，它们也不一定是相等的 。<strong>因此，equals 方法被覆盖过，则 <code>hashCode</code> 方法也必须被覆盖。</strong></p>
+<h3 id="3-5-java只有值传递"><a href="#3-5-java只有值传递" class="headerlink" title="3.5 java只有值传递"></a>3.5 java只有值传递</h3><p>无论是基本数据类型还是引用数据类型，传递后，使用的都是拷贝。</p>
+<p>总结一下 Java 中方法参数的使用情况：</p>
+<ul>
+<li>一个方法不能修改一个基本数据类型的参数（即数值型或布尔型）。</li>
+<li>一个方法可以改变一个对象参数的状态。</li>
+<li>一个方法不能让对象参数引用一个新的对象。</li>
+</ul>
+<h3 id="3-6-深拷贝和浅拷贝"><a href="#3-6-深拷贝和浅拷贝" class="headerlink" title="3.6 深拷贝和浅拷贝"></a>3.6 深拷贝和浅拷贝</h3><ol>
+<li><strong>浅拷贝</strong>：对基本数据类型进行值传递，对引用数据类型进行引用传递般的拷贝，此为浅拷贝。</li>
+<li><strong>深拷贝</strong>：对基本数据类型进行值传递，对引用数据类型，创建一个新的对象，并复制其内容，此为深拷贝。</li>
+</ol>
+<h3 id="3-7-成员变量和局部变量"><a href="#3-7-成员变量和局部变量" class="headerlink" title="3.7 成员变量和局部变量"></a>3.7 成员变量和局部变量</h3><p><strong>Java有几种类型的变量：</strong></p>
+<p>Jdk手册中所说：只有三种类型的变量：</p>
+<ul>
+<li>定义在类中的成员变量 — 被称为属性</li>
+<li>定义在方法（包含构造方法）或者块代码中的变量 — 被称为局部变量</li>
+<li>定义在方法定义中的变量 — 被称为参数</li>
+</ul>
+<p>其中，成员变量 = 类变量 + 实例变量。</p>
+<p>总结区别：</p>
+<ol>
+<li>从语法形式上看:成员变量是属于类的，而局部变量是在代码块或方法中定义的变量或是方法的参数；成员变量可以被 public,private,static 等修饰符所修饰，而局部变量不能被访问控制修饰符及 static 所修饰；但是，成员变量和局部变量都能被 final 所修饰。</li>
+<li>从变量在内存中的存储方式来看:如果成员变量是使用<code>static</code>修饰的，那么这个成员变量是属于类的，如果没有使用<code>static</code>修饰，这个成员变量是属于实例的。而对象存在于堆内存，局部变量则存在于栈内存。</li>
+<li>从变量在内存中的生存时间上看:成员变量是对象的一部分，它随着对象的创建而存在，而局部变量随着方法的调用而自动消失。</li>
+<li>成员变量如果没有被赋初值:则会自动以类型的默认值而赋值（一种情况例外:被 final 修饰的成员变量也必须显式地赋值），而局部变量则不会自动赋值。</li>
+</ol>
+<h3 id="3-8-内部类"><a href="#3-8-内部类" class="headerlink" title="3.8 内部类"></a>3.8 内部类</h3><p><strong>成员内部类</strong></p>
+<p>成员内部类是依附外部类而存在的，也就是说，如果要创建成员内部类的对象，前提是必须存在一个外部类的对象</p>
+<p>成员内部类可以无条件地访问外部类的成员</p>
+<p>外部类中如果要访问成员内部类的成员，必须先创建一个成员内部类的对象，再通过指向这个对象的引用来访问</p>
+<p><strong>局部内部类</strong></p>
+<p>局部内部类就像是方法里面的一个局部变量一样，是不能有 public、protected、private 以及 static 修饰符的</p>
+<p>它和成员内部类的区别在于局部内部类的访问仅限于方法内或者该作用域内</p>
+<p><strong>匿名内部类</strong></p>
+<p>为了免去给内部类命名，或者只想使用一次，就可以选择使用匿名内部类。</p>
+<p><strong>静态内部类</strong></p>
+<p>1.要创建嵌套类的对象，并不需要其外围类的对象；</p>
+<p>2.不能从嵌套类的对象中访问非静态的外围类对象（不能够从静态内部类的对象中访问外部类的非静态成员）；</p>
+<p><strong>内部类有什么作用？</strong></p>
+<p>1.内部类可以很好的实现隐藏 。一般的非内部类，是不允许有 private 与protected权限的，但内部类可以 </p>
+<p>2．内部类拥有外围类的所有元素的访问权限 (private修饰也能访问) </p>
+<p>3.可是实现多重继承 (让多个内部类分别继承多个其他类，使外部类可以同时获取多个其他类的属性) </p>
+<p>4.可以避免修改接口而实现同一个类中两种同名方法的调用。(外部类继承，让内部类实现接口)</p>
+<div class="note note-info">
+            <p><strong>为什么成员内部类可以无条件访问外部类的成员？</strong></p><p>编译器会默认为成员内部类添加了一个指向外部类对象的引用。从这里也间接说明了成员内部类是依赖于外部类的，如果没有创建外部类的对象，则无法对 Outter this&amp;0 引用进行初始化赋值，也就无法创建成员内部类的对象了。</p>
+          </div>
+
+<div class="note note-primary">
+            <p><strong>为什么局部内部类和匿名内部类只能访问局部final变量？</strong></p><p>外层方法结束后，变量生命周期结束，但内部类生命周期可能尚未结束。</p><p>为了能继续使用这个变量，java使用复制来解决。如果局部变量的值在编译期间就可以确定，则直接在匿名内部里面创建一个拷贝。如果局部变量的值无法在编译期间确定，则通过构造器传参的方式来对拷贝进行初始化赋值。这样一来，匿名内部类使用的变量是另一个局部变量，只不过值和方法中局部变量的值相等，因此和方法中的局部变量完全独立开。</p><p>但是，既然是拷贝，也就意味着改变局部变量值会造成拷贝和原变量数据不一致的情况。</p><p>为了避免这种情况，规定局部变量必须声明为final，否则无法访问。</p>
+          </div>
+
+
+
+<h2 id="四、Java面向对象"><a href="#四、Java面向对象" class="headerlink" title="四、Java面向对象"></a>四、Java面向对象</h2><h3 id="4-1-面向对象和面向过程"><a href="#4-1-面向对象和面向过程" class="headerlink" title="4.1 面向对象和面向过程"></a>4.1 面向对象和面向过程</h3><p>面向过程：性能比面向对象好。因为类的调用需要实例化，开销较大。</p>
+<p>面向对象：易维护、易复用、易拓展。因为面向对象封装 继承 多态的特性使得可以设计出低耦合的系统。</p>
+<p>那么面向过程性能一定比面向对象高吗？它不是根本原因，面向过程也要计算分配内存。Java性能不优秀的原因不是因为他是面向对象语言，是因为java是半编译语言，最终执行代码不是能直接执行的二进制机器代码</p>
+<h3 id="4-2-面向对象三大特性"><a href="#4-2-面向对象三大特性" class="headerlink" title="4.2 面向对象三大特性"></a>4.2 面向对象三大特性</h3><p><strong>封装</strong></p>
+<p><strong>继承</strong></p>
+<p>继承的优点是代码重用。 但其本意仍然是抽象。<br>继承 最好的使用场景是继承抽象类</p>
+<p><strong>多态</strong></p>
+<p>多态，顾名思义，表示一个对象具有多种的状态。具体表现为父类的引用指向子类的实例。</p>
+<h3 id="4-3-抽象类和接口"><a href="#4-3-抽象类和接口" class="headerlink" title="4.3 抽象类和接口"></a>4.3 抽象类和接口</h3><p>语法上讲。接口只能有static final变量。接口方法默认是public abstract，且不能有实现（java8</p>
+<p>开始可以有默认实现）抽象类方法可以是public protected这些但不能是private。</p>
+<p>概念上讲，抽象类是对类的抽象，是一种模板设计。接口是一种完全抽象，是对行为的抽象。</p>
+<p>在jdk8中。 Static和default方法可以有方法体。default方法属于实例,static方法属于类(接口)如果一个实现类 继承了两个接口(这两个接口没有继承关系,有同名的默认方法),那么必须在实现类,显示声明,否则编译器不知道调用哪个而报错</p>
+<h2 id="五、异常"><a href="#五、异常" class="headerlink" title="五、异常"></a>五、异常</h2><p><img src="/img/Java%E5%BC%82%E5%B8%B8%E7%B1%BB%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E5%9B%BE.png" srcset="/img/loading.gif"></p>
+<p><code>Exception</code> 和 <code>Error</code> 二者都是 Java 异常处理的重要子类，各自都包含大量子类。</p>
+<ul>
+<li><strong><code>Exception</code></strong> :程序本身可以处理的异常，可以通过 <code>catch</code> 来进行捕获。<code>Exception</code> 又可以分为 受检查异常(必须处理) 和 不受检查异常(可以不处理)。</li>
+<li><strong><code>Error</code></strong> ：<code>Error</code> 属于程序无法处理的错误 ，我们没办法通过 <code>catch</code> 来进行捕获 。例如，Java 虚拟机运行错误（<code>Virtual MachineError</code>）、虚拟机内存不够错误(<code>OutOfMemoryError</code>)、类定义错误（<code>NoClassDefFoundError</code>）等 。这些异常发生时，Java 虚拟机（JVM）一般会选择线程终止。</li>
+</ul>
+<p>除了<code>RuntimeException</code>及其子类以外，其他的<code>Exception</code>类及其子类都属于受检查异常 。常见的受检查异常有： IO 相关的异常、<code>ClassNotFoundException</code> 、<code>SQLException</code></p>
+<p><code>RuntimeException</code> 及其子类都统称为非受检查异常</p>
+<h2 id="六、Java集合"><a href="#六、Java集合" class="headerlink" title="六、Java集合"></a>六、Java集合</h2><h3 id="6-1-集合概述"><a href="#6-1-集合概述" class="headerlink" title="6.1 集合概述"></a>6.1 集合概述</h3><p><img src="/img/java%E9%9B%86%E5%90%88.png" srcset="/img/loading.gif"></p>
+<p><strong>List</strong> </p>
+<ul>
+<li>Arraylist ： Object[] 数组 </li>
+<li>Vector ： Object[] 数组 </li>
+<li>LinkedList ： 双向链表(JDK1.6 之前为循环链表，JDK1.7 取消了循环)</li>
+</ul>
+<p><strong>Set</strong> </p>
+<ul>
+<li>HashSet （⽆序，唯⼀）: 基于 HashMap 实现的，底层采⽤ HashMap 来保存元素 </li>
+<li>LinkedHashSet ： LinkedHashSet 是 HashSet 的⼦类，并且其内部是通过 LinkedHashMap 来实现的。有点类似于我们之前说的 LinkedHashMap 其内部是基于 HashMap 实现⼀样，不过还是有⼀点点区别的 </li>
+<li>TreeSet （有序，唯⼀）： 红⿊树(⾃平衡的排序⼆叉树)</li>
+</ul>
+<h3 id="6-2-List"><a href="#6-2-List" class="headerlink" title="6.2 List"></a>6.2 List</h3><p><strong>Arraylist 与 LinkedList 区别?</strong></p>
+<ol>
+<li><strong>是否保证线程安全：</strong> <code>ArrayList</code> 和 <code>LinkedList</code> 都是不同步的，也就是不保证线程安全；</li>
+<li><strong>底层数据结构：</strong> <code>Arraylist</code> 底层使用的是 <strong><code>Object</code> 数组</strong>；<code>LinkedList</code> 底层使用的是 <strong>双向链表</strong> 数据结构（JDK1.6 之前为循环链表，JDK1.7 取消了循环。注意双向链表和双向循环链表的区别，下面有介绍到！）</li>
+<li><strong>插入和删除是否受元素位置的影响：</strong> ① <strong><code>ArrayList</code> 采用数组存储，所以插入和删除元素的时间复杂度受元素位置的影响。</strong> 比如：执行<code>add(E e)</code>方法的时候， <code>ArrayList</code> 会默认在将指定的元素追加到此列表的末尾，这种情况时间复杂度就是 O(1)。但是如果要在指定位置 i 插入和删除元素的话（<code>add(int index, E element)</code>）时间复杂度就为 O(n-i)。因为在进行上述操作的时候集合中第 i 和第 i 个元素之后的(n-i)个元素都要执行向后位/向前移一位的操作。 ② <strong><code>LinkedList</code> 采用链表存储，所以对于<code>add(E e)</code>方法的插入，删除元素时间复杂度不受元素位置的影响，近似 O(1)，如果是要在指定位置<code>i</code>插入和删除元素的话（<code>(add(int index, E element)</code>） 时间复杂度近似为<code>o(n))</code>因为需要先移动到指定位置再插入。</strong></li>
+<li><strong>是否支持快速随机访问：</strong> <code>LinkedList</code> 不支持高效的随机元素访问，而 <code>ArrayList</code> 支持。快速随机访问就是通过元素的序号快速获取元素对象(对应于<code>get(int index)</code>方法)。</li>
+<li><strong>内存空间占用：</strong> ArrayList 的空 间浪费主要体现在在 list 列表的结尾会预留一定的容量空间，而 LinkedList 的空间花费则体现在它的每一个元素都需要消耗比 ArrayList 更多的空间（因为要存放直接后继和直接前驱以及数据）。</li>
+</ol>
+<h3 id="6-3-Set"><a href="#6-3-Set" class="headerlink" title="6.3 Set"></a>6.3 Set</h3><p><strong>比较 HashSet、LinkedHashSet 和 TreeSet 三者的异同</strong></p>
+<p><code>HashSet</code> 是 <code>Set</code> 接口的主要实现类 ，<code>HashSet</code> 的底层是 <code>HashMap</code>，线程不安全的，可以存储 null 值；</p>
+<p><code>LinkedHashSet</code> 是 <code>HashSet</code> 的子类，能够按照添加的顺序遍历；</p>
+<p><code>TreeSet</code> 底层使用红黑树，能够按照添加元素的顺序进行遍历，排序的方式有自然排序和定制排序。</p>
+<h3 id="6-4-线程安全的集合类"><a href="#6-4-线程安全的集合类" class="headerlink" title="6.4 线程安全的集合类"></a>6.4 线程安全的集合类</h3><ol>
+<li><p>使用Collections工具类下的Collections.synchronizedList(new ArrayList<E>());</p>
+</li>
+<li><p>Concurrent包中的</p>
+</li>
+</ol>
+<p>ConcurrentHashMap</p>
+<p>CopyOnWriteArrayList</p>
+<p>ConcurrentLinkedQueue</p>
+<h3 id="6-5-ArrayList-的扩容机制"><a href="#6-5-ArrayList-的扩容机制" class="headerlink" title="6.5 ArrayList 的扩容机制"></a>6.5 ArrayList 的扩容机制</h3><p><strong>初始化</strong></p>
+<pre><code class="hljs java"><span class="hljs-comment">/**</span>
+<span class="hljs-comment"> * Constructs an empty list with the specified initial capacity.</span>
+<span class="hljs-comment"> *</span>
+<span class="hljs-comment"> * <span class="hljs-doctag">@param</span>  initialCapacity  the initial capacity of the list</span>
+<span class="hljs-comment"> * <span class="hljs-doctag">@throws</span> IllegalArgumentException if the specified initial capacity</span>
+<span class="hljs-comment"> *         is negative</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ArrayList</span><span class="hljs-params">(<span class="hljs-keyword">int</span> initialCapacity)</span> </span>&#123;
+    <span class="hljs-keyword">if</span> (initialCapacity &gt; <span class="hljs-number">0</span>) &#123;
+        <span class="hljs-keyword">this</span>.elementData = <span class="hljs-keyword">new</span> Object[initialCapacity];
+    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (initialCapacity == <span class="hljs-number">0</span>) &#123;
+        <span class="hljs-keyword">this</span>.elementData = EMPTY_ELEMENTDATA;
+    &#125; <span class="hljs-keyword">else</span> &#123;
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(<span class="hljs-string">&quot;Illegal Capacity: &quot;</span>+
+                                           initialCapacity);
+    &#125;
+&#125;
+
+<span class="hljs-comment">/**</span>
+<span class="hljs-comment"> * Constructs an empty list with an initial capacity of ten.</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ArrayList</span><span class="hljs-params">()</span> </span>&#123;
+    <span class="hljs-keyword">this</span>.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA;
+&#125;
+
+<span class="hljs-comment">/**</span>
+<span class="hljs-comment"> * Constructs a list containing the elements of the specified</span>
+<span class="hljs-comment"> * collection, in the order they are returned by the collection&#x27;s</span>
+<span class="hljs-comment"> * iterator.</span>
+<span class="hljs-comment"> *</span>
+<span class="hljs-comment"> * <span class="hljs-doctag">@param</span> c the collection whose elements are to be placed into this list</span>
+<span class="hljs-comment"> * <span class="hljs-doctag">@throws</span> NullPointerException if the specified collection is null</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ArrayList</span><span class="hljs-params">(Collection&lt;? extends E&gt; c)</span> </span>&#123;
+    elementData = c.toArray();
+    <span class="hljs-keyword">if</span> ((size = elementData.length) != <span class="hljs-number">0</span>) &#123;
+        <span class="hljs-comment">// c.toArray might (incorrectly) not return Object[] (see 6260652)</span>
+        <span class="hljs-keyword">if</span> (elementData.getClass() != Object[].class)
+            elementData = Arrays.copyOf(elementData, size, Object[].class);
+    &#125; <span class="hljs-keyword">else</span> &#123;
+        <span class="hljs-comment">// replace with empty array.</span>
+        <span class="hljs-keyword">this</span>.elementData = EMPTY_ELEMENTDATA;
+    &#125;
+&#125;</code></pre>
+
+<p>三种初始化方式：</p>
+<p>ArrayList()：  大小为10的数组。并不是一开始就是10，而是第一次add赋予的10</p>
+<p>ArrayList(int initialCapacity)：根据initialCapacity初始化object数组</p>
+<p>ArrayList(Collection&lt;? extends E&gt; c)：集合-&gt;数组-&gt;集合</p>
+<p><strong>扩容</strong></p>
+<pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">add</span><span class="hljs-params">(E e)</span> </span>&#123;
+    <span class="hljs-comment">// size是当前集合拥有的元素个数</span>
+    ensureCapacityInternal(size + <span class="hljs-number">1</span>);  <span class="hljs-comment">// Increments modCount!!</span>
+    elementData[size++] = e; 
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ensureCapacityInternal</span><span class="hljs-params">(<span class="hljs-keyword">int</span> minCapacity)</span> </span>&#123;
+    ensureExplicitCapacity(calculateCapacity(elementData, minCapacity));
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">calculateCapacity</span><span class="hljs-params">(Object[] elementData, <span class="hljs-keyword">int</span> minCapacity)</span> </span>&#123;
+    <span class="hljs-comment">// 当前 elementData是否为空数组(即初始化容量为0或者调用了无参构造函数后的结果)，如果是，则使用DEFAULT_CAPACITY和minCapacity较大的那一个</span>
+    <span class="hljs-comment">// DEFAULT_CAPACITY 默认为10， 而minCapacity为size + 1</span>
+    <span class="hljs-keyword">if</span> (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA) &#123;
+        <span class="hljs-keyword">return</span> Math.max(DEFAULT_CAPACITY, minCapacity); 
+    &#125;
+    <span class="hljs-keyword">return</span> minCapacity;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ensureExplicitCapacity</span><span class="hljs-params">(<span class="hljs-keyword">int</span> minCapacity)</span> </span>&#123;
+    modCount++;
+     <span class="hljs-comment">// overflow-conscious code</span>
+    <span class="hljs-keyword">if</span> (minCapacity - elementData.length &gt; <span class="hljs-number">0</span>)
+        grow(minCapacity);
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">grow</span><span class="hljs-params">(<span class="hljs-keyword">int</span> minCapacity)</span> </span>&#123;
+    <span class="hljs-keyword">int</span> oldCapacity = elementData.length;
+    <span class="hljs-comment">// int newCapacity = oldCapacity + oldCapacity / 2；即容量扩大为原来的1.5倍</span>
+    <span class="hljs-keyword">int</span> newCapacity = oldCapacity + (oldCapacity &gt;&gt; <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">if</span> (newCapacity - minCapacity &lt; <span class="hljs-number">0</span>)
+        newCapacity = minCapacity;
+    <span class="hljs-keyword">if</span> (newCapacity - MAX_ARRAY_SIZE &gt; <span class="hljs-number">0</span>)
+        newCapacity = hugeCapacity(minCapacity);
+    <span class="hljs-comment">// minCapacity is usually close to size, so this is a win:</span>
+    elementData = Arrays.copyOf(elementData, newCapacity);
+&#125;
+
+  <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">hugeCapacity</span><span class="hljs-params">(<span class="hljs-keyword">int</span> minCapacity)</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (minCapacity &lt; <span class="hljs-number">0</span>) <span class="hljs-comment">// overflow</span>
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> OutOfMemoryError();
+        <span class="hljs-comment">//对minCapacity和MAX_ARRAY_SIZE进行比较</span>
+        <span class="hljs-comment">//若minCapacity大，将Integer.MAX_VALUE作为新数组的大小</span>
+        <span class="hljs-comment">//若MAX_ARRAY_SIZE大，将MAX_ARRAY_SIZE作为新数组的大小</span>
+        <span class="hljs-comment">//MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;</span>
+        <span class="hljs-keyword">return</span> (minCapacity &gt; MAX_ARRAY_SIZE) ?
+            Integer.MAX_VALUE :
+            MAX_ARRAY_SIZE;
+    &#125;</code></pre>
+
+<div class="note note-info">
+            <p>当进行add操作，进入<code>ensureCapacityInternal()</code>，minCapacity值为size + 1</p><p>若使用无参构造函数初始化ArraryList后，由于为空数组，赋minCapacity为DEFAULT_CAPACITY和minCapacity较大的那一个，因此minCapacity会被赋为默认值10进入<code>ensureExplicitCapacity()</code>，</p><p>若minCapacity大于此时的数组长度，会进入grow方法，开始正式扩容。若数组长度扩大为1.5倍后仍未达到minCapacity的要求，则选用minCapacity作为扩容后长度。</p><p>若扩容后超出最大值，进入hugeCapacity方法。若minCapacity大，将Integer.MAX_VALUE作为新数组的大小，若MAX_ARRAY_SIZE大，将MAX_ARRAY_SIZE作为新数组的大小。</p>
+          </div>
+
+
+
+<p>当我们要 add 进第1个元素到 ArrayList 时，elementData.length 为0 （因为还是一个空的 list），因为执行了 <code>ensureCapacityInternal()</code>方法 ，所以 minCapacity 此时为10。此时，minCapacity - elementData.length &gt; 0 成立，所以会进入 <code>grow()</code>(minCapacity) 方法。</p>
+<p>当add第2个元素时，minCapacity 为2，此时e lementData.length(容量)在添加第一个元素后扩容成 10 了。此时，minCapacity - elementData.length &gt; 0 不成立，所以不会进入 （执行）grow(minCapacity) 方法。</p>
+<p>添加第3、4···到第10个元素时，依然不会执行grow方法，数组容量都为10。</p>
+<p>直到添加第11个元素，minCapacity(为11)比elementData.length（为10）要大。进入grow方法进行扩容。</p>
+<p><strong>ArrayList</strong> <strong>每次扩容之后容量都会变为原来的</strong> <strong>1.5</strong> <strong>倍左右</strong></p>
+<h3 id="6-6-正确的数组转集合"><a href="#6-6-正确的数组转集合" class="headerlink" title="6.6 正确的数组转集合"></a>6.6 正确的数组转集合</h3><p><strong>1. 最简便的方法(推荐)</strong></p>
+<pre><code class="hljs java">List list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(Arrays.asList(<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;c&quot;</span>))Copy to clipboardErrorCopied</code></pre>
+
+<p><strong>2. 使用 Java8 的Stream(推荐)</strong></p>
+<pre><code class="hljs java">Integer [] myArray = &#123; <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> &#125;;
+List myList = Arrays.stream(myArray).collect(Collectors.toList());
+<span class="hljs-comment">//基本类型也可以实现转换（依赖boxed的装箱操作）</span>
+<span class="hljs-keyword">int</span> [] myArray2 = &#123; <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> &#125;;
+List myList = Arrays.stream(myArray2).boxed().collect(Collectors.toList());</code></pre>
+
+<p><strong>3. 使用 Apache Commons Collections</strong></p>
+<pre><code class="hljs java">List&lt;String&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;String&gt;();
+CollectionUtils.addAll(list, str);</code></pre>
+
+
+
+<h3 id="6-7-Map"><a href="#6-7-Map" class="headerlink" title="6.7 Map"></a>6.7 Map</h3><p><strong>HashMap 和 Hashtable 的区别</strong> </p>
+<ol>
+<li>线程是否安全： HashMap 是⾮线程安全的，HashTable 是线程安全的,因为 HashTable 内部的 ⽅法基本都经过 synchronized 修饰。（如果你要保证线程安全的话就使⽤ ConcurrentHashMap 吧！）；</li>
+<li>效率： 因为线程安全的问题，HashMap 要⽐ HashTable 效率⾼⼀点。另外，HashTable 基本被 淘汰，不要在代码中使⽤它； </li>
+<li>对 Null key 和 Null value 的⽀持： HashMap 可以存储 null 的 key 和 value，但 null 作 为键只能有⼀个，null 作为值可以有多个；HashTable 不允许有 null 键和 null 值，否则会 抛出 NullPointerException。 </li>
+<li>初始容量⼤⼩和每次扩充容量⼤⼩的不同 ： ① 创建时如果不指定容量初始值，Hashtable 默 认的初始⼤⼩为 11，之后每次扩充，容量变为原来的 2n+1。HashMap 默认的初始化⼤⼩为 16。之后每次扩充，容量变为原来的 2 倍。② 创建时如果给定了容量初始值，那么 Hashtable 会直接使⽤你给定的⼤⼩，⽽ HashMap 会将其扩充为 2 的幂次⽅⼤⼩（HashMap 中的 tableSizeFor() ⽅法保证，下⾯给出了源代码）。也就是说 HashMap 总是使⽤ 2 的幂作为 哈希表的⼤⼩,后⾯会介绍到为什么是 2 的幂次⽅。</li>
+<li>底层数据结构： JDK1.8 以后的 HashMap 在解决哈希冲突时有了较⼤的变化，当链表⻓度⼤于 阈值（默认为 8）（将链表转换成红⿊树前会判断，如果当前数组的⻓度⼩于 64，那么会选择 先进⾏数组扩容，⽽不是转换为红⿊树）时，将链表转化为红⿊树，以减少搜索时间。 Hashtable 没有这样的机制。</li>
+</ol>
+<p><strong>HashMap底层原理解析</strong></p>
+<span class="label label-primary">JDK1.8之前</span>
+
+<p>HashMap 通过 key 的 hashCode 经过扰动函数处理过后得到 hash 值，通过hash值判断当前元素存放的位置 ，如果当前位置存在元素的话，就判断该元素与要存⼊的元素的 hash 值以及 key 是否相同，如果相同的话，直接覆盖，不相同就通过拉链法解决冲突。</p>
+<p>所谓 “拉链法” 就是：将链表和数组相结合。也就是说创建⼀个链表数组，数组中每⼀格就是⼀个链 表。若遇到哈希冲突，则将冲突的值加到链表中即可。</p>
+<span class="label label-primary">JDK1.8</span>
+
+<p>JDK1.8 之后在解决哈希冲突时有了较⼤的变化，当链表⻓度⼤于阈值（默认为 8）（将链表转换成红⿊树前会判断，如果当前数组的⻓度⼩于 64，那么会选择先进⾏数组扩容，⽽不 是转换为红⿊树）时，将链表转化为红⿊树，以减少搜索时间。</p>
+<p><strong>HashMap 的长度为什么是 2 的幂次⽅</strong></p>
+<p>①hash%length  等价于  hash&amp;(length-1)的前提是 length 是 2 的 n 次⽅，这样<strong>使用二进制操作也能提高运算效率</strong></p>
+<p>②2 的幂次⽅-1 换算成二进制全是1，这样计算与运算的时候，对比下来<strong>碰撞几率更小，并且不会造成空间的浪费</strong>，毕竟0&amp;0 0&amp;1都是0，而1&amp;1为1 1&amp;0为0</p>
+<p><strong>HashMap 有哪⼏种常⻅的遍历⽅式?</strong></p>
+<ol>
+<li><p>使用迭代器（Iterator）EntrySet 的方式进行遍历</p>
+<pre><code class="hljs java">Iterator&lt;Map.Entry&lt;Integer, String&gt;&gt; iterator = map.entrySet().iterator();
+    <span class="hljs-keyword">while</span> (iterator.hasNext()) &#123;
+      Map.Entry&lt;Integer, String&gt; entry = iterator.next();
+      System.out.print(entry.getKey());
+      System.out.print(entry.getValue());
+    &#125;</code></pre>
+
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>使用迭代器（Iterator）KeySet 的方式进行遍历 </p>
+<pre><code class="hljs java">Iterator&lt;Integer&gt; iterator = map.keySet().iterator();
+   <span class="hljs-keyword">while</span> (iterator.hasNext()) &#123;
+     Integer key = iterator.next();
+     System.out.print(key);
+     System.out.print(map.get(key));
+   &#125;</code></pre>
+
+
+
+</li>
+</ol>
+<ol start="3">
+<li><p>使用 For Each EntrySet 的方式进行遍历；</p>
+<pre><code class="hljs java"><span class="hljs-keyword">for</span> (Map.Entry&lt;Integer, String&gt; entry : map.entrySet()) &#123;
+   System.out.print(entry.getKey());
+   System.out.print(entry.getValue());
+&#125;</code></pre>
+
+
+
+</li>
+</ol>
+<ol start="4">
+<li><p>使用 For Each KeySet 的方式进行遍历；</p>
+<pre><code class="hljs java"><span class="hljs-keyword">for</span> (Integer key : map.keySet()) &#123;
+      System.out.print(key);
+      System.out.print(map.get(key));
+    &#125;</code></pre>
+
+
+
+</li>
+</ol>
+<ol start="5">
+<li><p>使用 Lambda 表达式的方式进行遍历；</p>
+<p>map.forEach((key, value) -&gt; {</p>
+</li>
+<li><p>使用 Streams API 单线程的方式进行遍历；</p>
+<p>map.entrySet().stream().forEach((entry) -&gt; {</p>
+</li>
+<li><p>使用 Streams API 多线程的方式进行遍历。</p>
+<p>map.entrySet().parallelStream().forEach((entry) -&gt; {</p>
+</li>
+</ol>
+<p><strong>从安全性来讲，我们应该使用迭代器提供的 <code>iterator.remove()</code> 方法来进行删除，这种方式是安全的在遍历中删除集合的方式，或者使用 Stream 中的 <code>filter</code> 过滤掉要删除的数据再进行循环，也是安全的操作方式</strong>。</p>
+<p><strong>ConcurrentHashMap 和 Hashtable 的区别</strong></p>
+<p><code>ConcurrentHashMap</code> 和 <code>Hashtable</code> 的区别主要体现在实现线程安全的方式上不同。</p>
+<p><code>Hashtable</code> 使用 <code>synchronized</code> 来保证线程安全，是全表锁</p>
+<p><code>ConcurrentHashMap</code> <strong>JDK1.7</strong> 使用分段锁，是 <strong>Segment 数组 + HashEntry 数组 + 链表</strong>。JDK1.8 的 <code>ConcurrentHashMap</code> 是 <strong>Node 数组 + 链表 / 红黑树</strong>。只锁定当前链表或红黑二叉树的首节点，这样只要 hash 不冲突，就不会产生并发</p>
+<h3 id="6-8-阿里巴巴手册的小贴士"><a href="#6-8-阿里巴巴手册的小贴士" class="headerlink" title="6.8 阿里巴巴手册的小贴士"></a>6.8 阿里巴巴手册的小贴士</h3><p>【强制】不要在foreach循环进行元素的增删操作，请使用迭代器方式</p>
+<p>【强制】使用Arrays.asList, 使用集合的各类方法会报错，因为asList返回对象是一个Arrays内部类，并没有实现集合的修改方法。Arrays.asList体现的是适配器模式，后台数据仍是数组。</p>
+<h2 id="七、Java多线程"><a href="#七、Java多线程" class="headerlink" title="七、Java多线程"></a>七、Java多线程</h2><h3 id="7-1-概念"><a href="#7-1-概念" class="headerlink" title="7.1 概念"></a>7.1 概念</h3><p><strong>线程与进程</strong></p>
+<p>同类的多个线程共享进程的<strong>堆</strong>和<strong>方法区</strong>资源，但每个线程有自己的<strong>程序计数器</strong>、<strong>虚拟机栈</strong>和<strong>本地方法栈</strong></p>
+<p><strong>并发与并行</strong></p>
+<ul>
+<li><p>并发： 同一时间段，多个任务都在执行 (单位时间内不一定同时执行)；</p>
+</li>
+<li><p>并行： 单位时间内，多个任务同时执行。</p>
+<p><strong>上下文切换</strong></p>
+</li>
+</ul>
+<p>一个 CPU 核心在任意时刻只能被一个线程使用，为了让这些线程都能得到有效执行，CPU 采取的策略是为每个线程分配时间片并轮转的形式。</p>
+<p>当一个线程的时间片用完的时候就会重新处于就绪状态让给其他线程使用，这个过程就属于一次上下文切换。</p>
+<p>概括来说就是：当前任务在执行完 CPU 时间片切换到另一个任务之前会先保存自己的状态，以便下次再切换回这个任务时，可以再加载这个任务的状态。<strong>任务从保存到再加载的过程就是一次上下文切换</strong>。</p>
+<h3 id="7-2-线程状态"><a href="#7-2-线程状态" class="headerlink" title="7.2 线程状态"></a>7.2 线程状态</h3><p>线程共包括以下 5 种状态:</p>
+<p><strong>1.</strong> <strong>新建状态</strong>(New)：线程对象被创建后，就进入了新建状态。例如，Thread thread = new Thread()。</p>
+<p><strong>2.</strong> <strong>就绪状态</strong>(Runnable)：也被称为“可执行状态”。线程对象被创建后，其它线程调用了该对象的start()方法，从而来启动该线程。例如，thread.start()。处于就绪状态的线程，随时可能被CPU调度执行。</p>
+<p><strong>3.</strong> <strong>运行状态</strong>(Running)：线程获取CPU权限进行执行。需要注意的是，线程只能从就绪状态进入到运行状态。</p>
+<p><strong>4.</strong> <strong>阻塞状态</strong>(Blocked)：阻塞状态是线程因为某种原因放弃CPU使用权，暂时停止运行。直到线程进入就绪状态，才有机会转到运行状态。阻塞的情况分三种：</p>
+<ol>
+<li>等待阻塞 – 通过调用线程的wait()方法，让线程等待某工作的完成。</li>
+<li>同步阻塞 – 线程在获取synchronized同步锁失败(因为锁被其它线程所占用)，它会进入同步阻塞状态。</li>
+<li>其他阻塞 – 通过调用线程的sleep()或join()或发出了I/O请求时，线程会进入到阻塞状态。当sleep()状态超时、join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入就绪状态。</li>
+</ol>
+<p><strong>5.waiting</strong></p>
+<p><strong>6.TIME_WAITING</strong></p>
+<p><strong>7.终止</strong></p>
+<h3 id="7-3-线程操作"><a href="#7-3-线程操作" class="headerlink" title="7.3 线程操作"></a>7.3 线程操作</h3><p><strong>①</strong> <strong>sleep(long millis):</strong> <strong>在指定的毫秒数内让当前正在执行的线程休眠（暂停执行）</strong></p>
+<p>sleep()是Thread类的Static(静态)的方法；因此他不能改变对象的机锁，所以当在一个Synchronized块中调用Sleep()方法是，线程虽然休眠了，但是对象的机锁并没有被释放，其他线程无法访问这个对象（即使睡着也持有对象锁）。</p>
+<p>sleep()使当前线程进入停滞状态（阻塞当前线程），让出CUP的使用、目的是不让当前线程独自霸占该进程所获的CPU资源，以留一定时间给其他线程执行的机会。</p>
+<p><strong>②</strong> **join():**指等待线程终止</p>
+<p>主线程等待子线程的终止</p>
+<p><strong>③</strong> **yield():**暂停当前正在执行的线程对象，并执行其他线程。</p>
+<p>yield()应该做的是让当前运行线程回到可运行状态（就绪状态），以允许具有相同优先级的其他线程获得运行机会</p>
+<p><strong>④</strong> **interrupt():**不要以为它是中断某个线程！它只是给线程发送一个中断信号，让线程在无限等待时（如死锁时）能抛出，从而结束线程，但是如果你吃掉了这个异常，那么这个线程还是不会中断的！</p>
+<div class="note note-danger">
+            <p><strong>面试题——sleep()和yield()的区别：</strong> </p>
+          </div>
+
+<div class="note note-success">
+            <p>回答：</p><p>①线程执行 sleep() 方法后进入超时等待状态；线程执行 yield() 方法转入就绪状态</p><p>②sleep 方法使当前运行中的线程睡一段时间，这段时间的长短是由程序设定的，yield 方法使当前线程让出 CPU 占有权，但让出的时间是不可设定的。实际上，yield()方法对应了如下操作：先检测当前是否有相同优先级的线程处于同可运行状态，如有，则把 CPU 的占有权交给此线程，否则，继续运行原来的线程。执行yield()的线程有可能在进入到可执行状态后马上又被执行。所以yield()方法称为“退让”，它把运行机会让给了同等优先级的其他线程。</p><p>③sleep 允许较低优先级的线程获得运行机会，但 yield() 只会给相同优先级或者更高优先级的线程让出CPU</p><p>④sleep()方法声明抛出InterruptedException异常，而yield()方法没有声明抛出任何异常</p>
+          </div>
+
+<div class="note note-danger">
+            <p><strong>面试题——sleep()和wait()的区别：</strong> </p>
+          </div>
+
+ <div class="note note-success">
+            <p> 从功能上来说wait就是说线程在获取对象锁后，主动释放对象锁，同时本线程休眠。直到有其它线程调用对象的notify()唤醒该线程，才能继续获取对象锁，并继续执行。相应的notify()就是对对象锁的唤醒操作。但有一点需要注意的是notify()调用后，并不是马上就释放对象锁的，而是在相应的synchronized(){}语句块执行结束，自动释放锁后，JVM会在wait()对象锁的线程中随机选取一线程，赋予其对象锁，唤醒线程，继续执行。这样就提供了在线程间同步、唤醒的操作。</p><p>​    Thread.sleep()与Object.wait()二者都可以暂停当前线程，释放CPU控制权，主要的区别在于Object.wait()在释放CPU同时，释放了对象锁的控制。</p>
+          </div>
+
+
+
+<div class="note note-danger">
+            <p><strong>面试题——我们调用 start() 方法时会执行 run() 方法，为什么我们不能直接调用 run() 方法？</strong></p>
+          </div>
+
+ <div class="note note-success">
+            <p>调用 <code>start()</code> 方法方可启动线程并使线程进入就绪状态，直接执行 <code>run()</code> 方法的话不会以多线程的方式执行。</p>
+          </div>
+
+<h3 id="7-4-死锁"><a href="#7-4-死锁" class="headerlink" title="7.4 死锁"></a>7.4 死锁</h3><p>死锁必须具备以下四个条件：</p>
+<ol>
+<li>互斥条件：该资源任意一个时刻只由一个线程占用。</li>
+<li>请求与保持条件：一个进程因请求资源而阻塞时，对已获得的资源保持不放。</li>
+<li>不剥夺条件:线程已获得的资源在未使用完之前不能被其他线程强行剥夺，只有自己使用完毕后才释放资源。</li>
+<li>循环等待条件:若干进程之间形成一种头尾相接的循环等待资源关系。</li>
+</ol>
+<p>如何避免死锁</p>
+<p>破坏循环等待，及时释放资源。</p>
+<h3 id="7-5-Synchronized"><a href="#7-5-Synchronized" class="headerlink" title="7.5 Synchronized"></a>7.5 Synchronized</h3><p><code>synchronized</code> 关键字解决的是多个线程之间访问资源的同步性，<code>synchronized</code>关键字可以保证被它修饰的方法或者代码块在任意时刻只能有一个线程执行。</p>
+<h4 id="三种应用方式"><a href="#三种应用方式" class="headerlink" title="三种应用方式"></a>三种应用方式</h4><ul>
+<li>修饰实例方法</li>
+</ul>
+<p>锁住的是实例对象。</p>
+<p>当一个线程正在访问一个对象的 synchronized 实例方法，其他线程无法访问此实例方法，无法获取锁，无法访问其他synchronized，可以访问其他非synchronized方法</p>
+<ul>
+<li>修饰静态方法</li>
+</ul>
+<p>锁住的是Class对象</p>
+<p>线程A访问static synchronized方法与线程B访问synchronized非static方法，是不互斥的</p>
+<ul>
+<li>修饰代码块：</li>
+</ul>
+<p>需要自己提供锁对象，锁对象包括对象本身（this）、对象的Class和其他对象</p>
+<div class="note note-danger">
+            <p><strong>面试题——构造方法可以使用synchronized关键字吗？</strong></p>
+          </div>
+
+ <div class="note note-success">
+            <p>构造方法本身就属于线程安全的，不存在同步的构造方法一说。</p>
+          </div>
+
+
+
+<h4 id="代码块底层原理"><a href="#代码块底层原理" class="headerlink" title="代码块底层原理"></a>代码块底层原理</h4><p>在JVM中，对象在内存中的布局分为三块区域：对象头、实例数据和对齐填充</p>
+<p>对象头中的指针指向monitor，每个对象都存在着一个 monitor 与之关联，在Java虚拟机(HotSpot)中，monitor是由ObjectMonitor实现的，其主要数据结构如下</p>
+<pre><code class="hljs c++">ObjectMonitor() &#123;
+    _header       = <span class="hljs-literal">NULL</span>;
+    _count        = <span class="hljs-number">0</span>; <span class="hljs-comment">//记录个数</span>
+    _waiters      = <span class="hljs-number">0</span>,
+    _recursions   = <span class="hljs-number">0</span>;
+    _object       = <span class="hljs-literal">NULL</span>;
+    _owner        = <span class="hljs-literal">NULL</span>;
+    _WaitSet      = <span class="hljs-literal">NULL</span>; <span class="hljs-comment">//处于wait状态的线程，会被加入到_WaitSet</span>
+    _WaitSetLock  = <span class="hljs-number">0</span> ;
+    _Responsible  = <span class="hljs-literal">NULL</span> ;
+    _succ         = <span class="hljs-literal">NULL</span> ;
+    _cxq          = <span class="hljs-literal">NULL</span> ;
+    FreeNext      = <span class="hljs-literal">NULL</span> ;
+    _EntryList    = <span class="hljs-literal">NULL</span> ; <span class="hljs-comment">//处于等待锁block状态的线程，会被加入到该列表</span>
+    _SpinFreq     = <span class="hljs-number">0</span> ;
+    _SpinClock    = <span class="hljs-number">0</span> ;
+    OwnerIsThread = <span class="hljs-number">0</span> ;
+  &#125;</code></pre>
+
+<p>ObjectMonitor中有两个队列，WaitSet 和 EntryList，用来保存ObjectWaiter对象列表( 每个等待锁的线程都会被封装成ObjectWaiter对象)，_owner指向持有ObjectMonitor对象的线程，当多个线程同时访问一段同步代码时，首先会进入 _EntryList 集合，当线程获取到对象的monitor 后进入 _Owner 区域并把monitor中的owner变量设置为当前线程同时monitor中的计数器count加1，若线程调用 wait() 方法，将释放当前持有的monitor，owner变量恢复为null，count自减1，同时该线程进入 WaitSe t集合中等待被唤醒。若当前线程执行完毕也将释放monitor(锁)并复位变量的值，以便其他线程进入获取monitor(锁)。</p>
+<p><img src="/img/synchronized_monitor.png" srcset="/img/loading.gif"></p>
+<p>由此看来，monitor对象存在于每个Java对象的对象头中(存储的指针的指向，synchronized锁便是通过这种方式获取锁的，也是为什么Java中任意对象可以作为锁的原因，同时也是notify/notifyAll/wait等方法存在于顶级对象Object中的原因。另外，**<code>wait/notify</code>等方法也依赖于<code>monitor</code>对象，这就是为什么只有在同步的块或者方法中才能调用<code>wait/notify</code>等方法，否则会抛出<code>java.lang.IllegalMonitorStateException</code>的异常的原因。**</p>
+<p>进一步分析：</p>
+<pre><code class="hljs c"><span class="hljs-number">3</span>: monitorenter  <span class="hljs-comment">//进入同步方法 </span>
+
+<span class="hljs-number">15</span>: monitorexit   <span class="hljs-comment">//退出同步方法</span>
+<span class="hljs-number">16</span>: <span class="hljs-keyword">goto</span>          
+
+<span class="hljs-number">21</span>: monitorexit <span class="hljs-comment">//退出同步方法</span></code></pre>
+
+<p>当执行monitorenter指令时，当前线程将试图获取 objectref(即对象锁) 所对应的 monitor 的持有权，当 objectref 的 monitor 的进入计数器为 0，那线程可以成功取得 monitor，并将计数器值设置为 1，取锁成功。如果当前线程已经拥有 objectref 的 monitor 的持有权，那它可以重入这个 monitor (关于重入性稍后会分析)，重入时计数器的值也会加 1。倘若其他线程已经拥有 objectref 的 monitor 的所有权，那当前线程将被阻塞，直到正在执行线程执行完毕，即monitorexit指令被执行，执行线程将释放 monitor(锁)并设置计数器值为0 ，其他线程将有机会持有 monitor 。值得注意的是编译器将会确保无论方法通过何种方式完成，方法中调用过的每条 monitorenter 指令都有执行其对应 monitorexit 指令，而无论这个方法是正常结束还是异常结束。为了保证在方法异常完成时 monitorenter 和 monitorexit 指令依然可以正确配对执行，编译器会自动产生一个异常处理器，这个异常处理器声明可处理所有的异常，它的目的就是用来执行 monitorexit 指令。从字节码中也可以看出多了一个monitorexit指令，它就是异常结束时被执行的释放monitor 的指令。</p>
+<div class="note note-info">
+            <p><strong>synchronized修饰代码块原理总结</strong>：字节码层面上，一个线程执行monitorenter指令时，当前线程将试图获取对象对应的 monitor 的持有权。每个Java对象的对象头中都存储了一个指向monitor对象的指针。线程获取锁的过程是进入monitor对象的 _EntryList 集合，成功获取到monitor 的线程进入 _Owner 区域，owner变量被设置为此线程，同时计数器count加1。线程执行完毕，monitorexit指令被执行，释放锁的过程是owner变量恢复为null，count减1。</p>
+          </div>
+
+
+
+<h4 id="修饰方法底层原理"><a href="#修饰方法底层原理" class="headerlink" title="修饰方法底层原理"></a>修饰方法底层原理</h4><p>方法级的同步是隐式，即无需通过字节码指令来控制的，它实现在方法调用和返回操作之中。JVM可以从方法常量池中的方法表结构(method_info Structure) 中的 ACC_SYNCHRONIZED 访问标志区分一个方法是否同步方法。当方法调用时，调用指令将会 检查方法的 ACC_SYNCHRONIZED 访问标志是否被设置，如果设置了，执行线程将先持有monitor（虚拟机规范中用的是管程一词）， 然后再执行方法，最后再方法完成(无论是正常完成还是非正常完成)时释放monitor。在方法执行期间，执行线程持有了monitor，其他任何线程都无法再获得同一个monitor。如果一个同步方法执行期间抛 出了异常，并且在方法内部无法处理此异常，那这个同步方法所持有的monitor将在异常抛到同步方法之外时自动释放。下面我们看看字节码层面如何实现：</p>
+<pre><code class="hljs c"> <span class="hljs-comment">//==================syncTask方法======================</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> synchronized <span class="hljs-keyword">void</span> <span class="hljs-title">syncTask</span><span class="hljs-params">()</span></span>;
+    descriptor: ()V
+    <span class="hljs-comment">//方法标识ACC_PUBLIC代表public修饰，ACC_SYNCHRONIZED指明该方法为同步方法</span>
+    flags: ACC_PUBLIC, ACC_SYNCHRONIZED
+    Code:
+      <span class="hljs-built_in">stack</span>=<span class="hljs-number">3</span>, locals=<span class="hljs-number">1</span>, args_size=<span class="hljs-number">1</span>
+         <span class="hljs-number">0</span>: aload_0
+         <span class="hljs-number">1</span>: dup
+         <span class="hljs-number">2</span>: getfield      #<span class="hljs-number">2</span>                  <span class="hljs-comment">// Field i:I</span>
+         <span class="hljs-number">5</span>: iconst_1
+         <span class="hljs-number">6</span>: iadd
+         <span class="hljs-number">7</span>: putfield      #<span class="hljs-number">2</span>                  <span class="hljs-comment">// Field i:I</span>
+        <span class="hljs-number">10</span>: <span class="hljs-keyword">return</span>
+      LineNumberTable:
+        line <span class="hljs-number">12</span>: <span class="hljs-number">0</span>
+        line <span class="hljs-number">13</span>: <span class="hljs-number">10</span>
+&#125;</code></pre>
+
+<p>从字节码中可以看出，synchronized修饰的方法并没有monitorenter指令和monitorexit指令，取得代之的确实是ACC_SYNCHRONIZED标识，该标识指明了该方法是一个同步方法，JVM通过该ACC_SYNCHRONIZED访问标志来辨别一个方法是否声明为同步方法，从而执行相应的同步调用。</p>
+<div class="note note-info">
+            <p><strong>synchronized修饰方法原理总结</strong>：<code>synchronized</code>方法在<code>method_info</code>结构有<code>AAC_synchronized</code>标记，线程在执行的时候获取对应的锁，从而实现同步方法</p>
+          </div>
+
+
+
+<h4 id="java对synchronized的优化"><a href="#java对synchronized的优化" class="headerlink" title="java对synchronized的优化"></a>java对synchronized的优化</h4><p>锁的状态总共有四种，无锁状态、偏向锁、轻量级锁和重量级锁。</p>
+<p>锁的升级是单向的，也就是说只能从低到高升级，不会出现锁的降级</p>
+<span class="label label-primary">偏向锁</span>
+<p>偏向锁是Java 6之后加入的新锁，它是一种针对加锁操作的优化手段，经过研究发现，在大多数情况下，锁不仅不存在多线程竞争，而且<strong>总是由同一线程多次获得</strong>，因此为了减少同一线程获取锁(会涉及到一些CAS操作,耗时)的代价而引入偏向锁。偏向锁的核心思想是，如果一个线程获得了锁，那么锁就进入偏向模式，此时Mark Word 的结构也变为偏向锁结构，<strong>当这个线程再次请求锁时，无需再做任何同步操作</strong>，即获取锁的过程，这样就省去了大量有关锁申请的操作，从而也就提供程序的性能。所以，对于没有锁竞争的场合，偏向锁有很好的优化效果，毕竟极有可能连续多次是同一个线程申请相同的锁。但是对于锁竞争比较激烈的场合，偏向锁就失效了，因为这样场合极有可能每次申请锁的线程都是不相同的，因此这种场合下不应该使用偏向锁，否则会得不偿失，需要注意的是，偏向锁失败后，并不会立即膨胀为重量级锁，而是先升级为轻量级锁。</p>
+<span class="label label-primary">轻量级锁</span>
+<p>倘若偏向锁失败，虚拟机并不会立即升级为重量级锁，它还会尝试使用一种称为轻量级锁的优化手段(1.6之后加入的)，此时Mark Word 的结构也变为轻量级锁的结构。轻量级锁能够提升程序性能的依据是“<strong>对绝大部分的锁，在整个同步周期内都不存在竞争</strong>”，注意这是经验数据。需要了解的是，<strong>轻量级锁所适应的场景是线程交替执行同步块的场合</strong>，如果存在同一时间访问同一锁的场合，就会导致轻量级锁膨胀为重量级锁。</p>
+<span class="label label-primary">自旋锁</span>
+<p>轻量级锁失败后，虚拟机为了避免线程真实地在操作系统层面挂起，还会进行一项称为自旋锁的优化手段。这是基于在大多数情况下，<strong>线程持有锁的时间都不会太长</strong>，如果直接挂起操作系统层面的线程可能会得不偿失，毕竟操作系统实现线程之间的切换时需要从用户态转换到核心态，这个状态之间的转换需要相对比较长的时间，时间成本相对较高，因此自旋锁会假设在不久将来，当前的线程可以获得锁，**因此虚拟机会让当前想要获取锁的线程做几个空循环(**这也是称为自旋的原因)，一般不会太久，可能是50个循环或100循环，在经过若干次循环后，如果得到锁，就顺利进入临界区。如果还不能获得锁，那就会将线程在操作系统层面挂起，这就是自旋锁的优化方式，这种方式确实也是可以提升效率的。最后没办法也就只能升级为重量级锁了。</p>
+<span class="label label-primary">锁消除</span>
+<p>消除锁是虚拟机另外一种锁的优化，这种优化更彻底，Java虚拟机在JIT编译时(可以简单理解为当某段代码即将第一次被执行时进行编译，又称即时编译)，通过对运行上下文的扫描，<strong>去除不可能存在共享资源竞争的锁</strong>，通过这种方式消除没有必要的锁，可以节省毫无意义的请求锁时间</p>
+<p><strong>synchronized 的一些关键点</strong></p>
+<p><strong>可重入性</strong></p>
+<p>当一个线程再次请求自己持有对象锁的临界资源时，这种情况属于重入锁，请求将会成功。比如说，一个线程调用synchronized方法的同时在其方法体内部调用该对象另一个synchronized方法，也就是说一个线程得到一个对象锁后再次请求该对象锁，是允许的。</p>
+<p><strong>线程中断与synchronized</strong></p>
+<p>对于synchronized来说，如果一个线程在等待锁，那么结果只有两种，要么它获得这把锁继续执行，要么它就保存等待，即使调用中断线程的方法，也不会生效</p>
+<p><strong>等待唤醒机制与synchronized</strong></p>
+<p>所谓等待唤醒机制本篇主要指的是notify/notifyAll和wait方法，在使用这3个方法时，必须处于synchronized代码块或者synchronized方法中，否则就会抛出IllegalMonitorStateException异常，这是因为调用这几个方法前必须拿到当前对象的监视器monitor对象，也就是说notify/notifyAll和wait方法依赖于monitor对象，在前面的分析中，我们知道monitor 存在于对象头的Mark Word 中(存储monitor引用指针)，而synchronized关键字可以获取 monitor ，这也就是为什么notify/notifyAll和wait方法必须在synchronized代码块或者synchronized方法调用的原因。</p>
+<h4 id="synchronized和Lock"><a href="#synchronized和Lock" class="headerlink" title="synchronized和Lock"></a>synchronized和Lock</h4><p><code>synchronized</code>是Java中的关键字，是Java的内置实现。<code>Lock</code>是Java中的接口。<code>synchronized</code> 是依赖于 JVM 实现的</p>
+<p><code>synchronized</code>不能去尝试获得锁，没有获得锁就会被阻塞； <code>Lock</code>可以去尝试获得锁，如果未获得可以尝试处理其他逻辑。</p>
+<p><code>synchronized</code>是不可以中断的，<code>Lock</code>可中断。</p>
+<p>**ReentrantLock 比 synchronized的异同 **</p>
+<p>二者都是可重入锁</p>
+<p><code>ReentrantLock</code>基于接口实现  <code>synchronized</code>基于jvm</p>
+<p><strong>ReentrantLock 比 synchronized 增加了一些高级功能</strong>：</p>
+<p>相比<code>synchronized</code>，<code>ReentrantLock</code>增加了一些高级功能。主要来说主要有三点：</p>
+<ul>
+<li><strong>等待可中断</strong> : <code>ReentrantLock</code>提供了一种能够中断等待锁的线程的机制，通过 <code>lock.lockInterruptibly()</code> 来实现这个机制。也就是说正在等待的线程可以选择放弃等待，改为处理其他事情。</li>
+<li><strong>可实现公平锁</strong> : <code>ReentrantLock</code>可以指定是公平锁还是非公平锁。而<code>synchronized</code>只能是非公平锁。所谓的公平锁就是先等待的线程先获得锁。<code>ReentrantLock</code>默认情况是非公平的，可以通过 <code>ReentrantLock</code>类的<code>ReentrantLock(boolean fair)</code>构造方法来制定是否是公平的。</li>
+<li><strong>可实现选择性通知（锁可以绑定多个条件）</strong>: <code>synchronized</code>关键字与<code>wait()</code>和<code>notify()</code>/<code>notifyAll()</code>方法相结合可以实现等待/通知机制。<code>ReentrantLock</code>类当然也可以实现，但是需要借助于<code>Condition</code>接口与<code>newCondition()</code>方法。</li>
+</ul>
+<p><code>Condition</code>是 JDK1.5 之后才有的，它具有很好的灵活性，比如可以实现多路通知功能也就是在一个<code>Lock</code>对象中可以创建多个<code>Condition</code>实例（即对象监视器），<strong>线程对象可以注册在指定的<code>Condition</code>中，从而可以有选择性的进行线程通知，在调度线程上更加灵活。 在使用<code>notify()/notifyAll()</code>方法进行通知时，被通知的线程是由 JVM 选择的，用<code>ReentrantLock</code>类结合<code>Condition</code>实例可以实现“选择性通知”</strong> ，这个功能非常重要，而且是 Condition 接口默认提供的。而<code>synchronized</code>关键字就相当于整个 Lock 对象中只有一个<code>Condition</code>实例，所有的线程都注册在它一个身上。如果执行<code>notifyAll()</code>方法的话就会通知所有处于等待状态的线程这样会造成很大的效率问题，而<code>Condition</code>实例的<code>signalAll()</code>方法 只会唤醒注册在该<code>Condition</code>实例中的所有等待线程。</p>
+<p><strong>CAS</strong></p>
+<p>CAS(compare and swap),中文为：比较并交换，是并发控制操作的基础。<br> CAS有三个值：内存值、原始值、修改值，如果原始值不等于内存值，返回false；如果等于则修改，返回true，并将内存值修改为修改值。<br> CAS是<strong>乐观锁</strong>用到的主要机制，乐观锁是不用加锁去执行操作，如果产生冲突则失败重试，直到成功为止，也叫做“自旋”。</p>
+<h3 id="7-6-双重检测锁"><a href="#7-6-双重检测锁" class="headerlink" title="7.6 双重检测锁"></a>7.6 双重检测锁</h3><pre><code class="hljs java"><span class="hljs-comment">// 双重检测锁代码</span>
+<span class="hljs-meta">@Component</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StudentFactory</span> </span>&#123;
+    <span class="hljs-keyword">private</span> Student student;
+    
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-title">getInstance</span><span class="hljs-params">()</span></span>&#123;
+        <span class="hljs-keyword">if</span>(student == <span class="hljs-keyword">null</span>)&#123;
+            <span class="hljs-keyword">synchronized</span>(<span class="hljs-keyword">this</span>)&#123;
+                <span class="hljs-keyword">if</span>(student == <span class="hljs-keyword">null</span>)&#123;
+                    <span class="hljs-comment">// 以下语句实现由三步构成</span>
+                    <span class="hljs-comment">// （1）申请堆空间</span>
+                    <span class="hljs-comment">// （2）使用对象的初始化数据初始化堆空间</span>
+                    <span class="hljs-comment">// （3）student引用指向堆空间</span>
+                    student = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">24</span>);
+                &#125;
+            &#125;
+        &#125;
+        <span class="hljs-keyword">return</span> stuent;
+    &#125;
+&#125;
+</code></pre>
+
+<p>为何会出现线程安全呢？</p>
+<p>①共享数据，这里是个单例bean</p>
+<p>②“三步构成”顺序不一定固定，即不具备原子性，这是因为JVM 具有指令重排的特性</p>
+<p>因此会出现在申请完空间后直接引用指向，从而在瞬时的第二次进入方法时判断为非空，返回了一个（null， 0）的student对象。</p>
+<pre><code class="hljs java"><span class="hljs-comment">// 第一种解决方案</span>
+<span class="hljs-comment">// 同步方法，使之成为一个串行逻辑，相当垃圾啊</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">static</span> <span class="hljs-title">getInstance</span><span class="hljs-params">()</span></span>&#123;</code></pre>
+
+<pre><code class="hljs java"><span class="hljs-comment">// 第二种解决方案</span>
+<span class="hljs-comment">// 成员变量声明为validate  volatile 可以禁止 JVM 的指令重排</span>
+<span class="hljs-keyword">private</span> validate Student student;</code></pre>
+
+<pre><code class="hljs java"><span class="hljs-comment">// 第三种解决方案</span>
+<span class="hljs-comment">// Integer Long Boolean的成员变量可以使用Atomic类</span>
+<span class="hljs-keyword">private</span> AtomicLong value；</code></pre>
+
+
+
+<h3 id="7-7-Violatile"><a href="#7-7-Violatile" class="headerlink" title="7.7 Violatile"></a>7.7 Violatile</h3><p><strong>Violatile的两大特点：</strong></p>
+<ul>
+<li>防止指令重排</li>
+<li>保证数据的可见性</li>
+</ul>
+<p><strong>volatile保证可见性底层原理</strong></p>
+<ol>
+<li>写操作，发送Lock前缀的指令，引起处理器缓存写回内存；</li>
+<li><strong>通过CPU 总线嗅探机制</strong>通知其他线程该变量副本已经失效，需要重新从主内存中读取。</li>
+</ol>
+<p><strong>volatile防止指令重排底层原理</strong></p>
+<p>内存屏障指令</p>
+<ul>
+<li>在每个 volatile 读操作的后面插入 LoadLoad 屏障和 LoadStore 屏障。</li>
+<li>在每个 volatile 写操作的前后分别插入一个 StoreStore 屏障和一个 StoreLoad 屏障。</li>
+</ul>
+<p> <strong>synchronized 关键字和 volatile 关键字的区别</strong></p>
+<p><code>synchronized</code> 关键字和 <code>volatile</code> 关键字是两个互补的存在，而不是对立的存在！</p>
+<ul>
+<li><code>volatile</code> 关键字是线程同步的<strong>轻量级实现</strong>，所以<code>volatile </code>性能肯定比<code>synchronized</code>关键字要好。但是<code>volatile</code> 关键字只能用于变量而 <code>synchronized</code> 关键字可以修饰方法以及代码块。</li>
+<li><code>volatile</code> 关键字<strong>能保证数据的可见性，但不能保证数据的原子性</strong>。volatile 可以使纯赋值操作是原子的。<code>synchronized</code> 关键字两者都能保证。</li>
+<li><code>volatile</code>关键字主要用于解决变量在多个线程之间的<strong>可见性</strong>，而 <code>synchronized</code> 关键字解决的是多个线程之间访问资源的<strong>同步性</strong>。</li>
+</ul>
+<h3 id="7-8-JMM与happens-before"><a href="#7-8-JMM与happens-before" class="headerlink" title="7.8  JMM与happens-before"></a>7.8  JMM与happens-before</h3><p><strong>并发编程的三个重要特性</strong></p>
+<ol>
+<li><strong>原子性</strong> : 一个的操作或者多次操作，要么所有的操作全部都得到执行并且不会收到任何因素的干扰而中断，要么所有的操作都执行，要么都不执行。<code>synchronized</code> 可以保证代码片段的原子性。</li>
+<li><strong>可见性</strong> ：当一个变量对共享变量进行了修改，那么另外的线程都是立即可以看到修改后的最新值。<code>volatile</code> 关键字可以保证共享变量的可见性。</li>
+<li><strong>有序性</strong> ：代码在执行的过程中的先后顺序，Java 在编译器以及运行期间的优化，代码的执行顺序未必就是编写代码时候的顺序。<code>volatile</code> 关键字可以禁止指令进行重排序优化。</li>
+</ol>
+<p><strong>JMM介绍</strong></p>
+<p>JMM（Java Memory Model）：Java 内存模型，是 Java 虚拟机规范中所定义的一种内存模型，Java 内存模型是标准化的，屏蔽掉了底层不同计算机的区别。也就是说，JMM 是 JVM 中定义的一种并发编程的底层模型机制。</p>
+<p>JMM 定义了线程和主内存之间的抽象关系：线程之间的共享变量存储在主内存中，每个线程都有一个私有的本地内存，本地内存中存储了该线程以读/写共享变量的副本。</p>
+<p><strong>happens-before</strong></p>
+<p>JMM使用happens-before的概念来阐述多线程之间的内存可见性。</p>
+<blockquote>
+<p>在JMM中，如果一个操作执行的结果需要对另一个操作可见，那么这两个操作之间必须存在happens-before关系。</p>
+</blockquote>
+<ul>
+<li>程序顺序规则：一个线程中的每个操作，happens-before 于该线程中的任意后续操作。</li>
+<li>监视器锁规则：对一个监视器锁的解锁，happens-before 于随后对这个监视器锁的加锁。</li>
+<li>volatile 变量规则：对一个 volatile 域的写，happens-before 于任意后续对这个 volatile 域的读。</li>
+<li>传递性：如果 A happens-before B，且 B happens-before C，那么 A happens-before C。</li>
+<li>start() 规则：Thread.start() 的调用会 happens-before 于启动线程里面的动作。</li>
+<li>join() 规则：Thread 中的所有动作都 happens-before 于其他线程从 Thread.join() 中成功返回。</li>
+</ul>
+<h3 id="7-9-ThreadLocal"><a href="#7-9-ThreadLocal" class="headerlink" title="7.9 ThreadLocal"></a>7.9 ThreadLocal</h3><p><strong>概念：存储每个线程的私有数据</strong></p>
+<p><strong>原理：</strong></p>
+<p>最终的变量是放在了当前线程的 <code>ThreadLocalMap</code> 中，并不是存在 <code>ThreadLocal</code> 上，<code>ThreadLocal</code> 可以理解为只是<code>ThreadLocalMap</code>的封装，传递了变量值。 <code>ThrealLocal</code> 类中可以通过<code>Thread.currentThread()</code>获取到当前线程对象后，直接通过<code>getMap(Thread t)</code>可以访问到该线程的<code>ThreadLocalMap</code>对象。</p>
+<p><strong>内存泄露问题</strong></p>
+<p> key 为 <code>ThreadLocal</code> 的弱引用,而 value 是强引用。在垃圾回收的时候，key 会被清理掉，而 value 不会被清理掉。这样一来，<code>ThreadLocalMap</code> 中就会出现 key 为 null 的 Entry</p>
+<h3 id="7-10-线程池"><a href="#7-10-线程池" class="headerlink" title="7.10 线程池"></a>7.10 线程池</h3><p><strong>创建线程的方式</strong></p>
+<ol>
+<li>继承Thread</li>
+<li>实现runnable接口</li>
+<li>实现callable接口   FutureTask</li>
+<li>使用线程池</li>
+</ol>
+<p><code>Runnable</code> 接口不会返回结果或抛出检查异常，但是<code>Callable</code> 接口可以。</p>
+<p><strong>线程池的好处</strong>：</p>
+<ul>
+<li><strong>降低资源消耗</strong>。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。</li>
+<li><strong>提高响应速度</strong>。当任务到达时，任务可以不需要的等到线程创建就能立即执行。</li>
+<li><strong>提高线程的可管理性</strong>。线程是稀缺资源，如果无限制的创建，不仅会消耗系统资源，还会降低系统的稳定性，使用线程池可以进行统一的分配，调优和监控。</li>
+</ul>
+<p><strong>线程池分类</strong></p>
+<p>FixedThreadPool 线程数量固定的核心线程池  能快速响应</p>
+<p>CachedThreadPool 无线程数量限制，任务会被立即执行  适合执行大量不耗时任务</p>
+<p>ScheduledThreadPool  核心固定 非核心一旦空置会被回收  执行周期性任务</p>
+<p>SingleThreadExecutor  一个核心线程</p>
+<div class="note note-danger">
+            <p>FixedThreadPool和SingleThreadExecutor  使用无界队列 <code>LinkedBlockingQueue</code> 作为线程池的工作队列，可能会导致OOM</p><p><code>CachedThreadPool</code> 的<code>corePoolSize</code> 被设置为空（0），<code>maximumPoolSize</code>被设置为 Integer.MAX.VALUE，可能会导致OOM</p>
+          </div>
+
+
+
+<p><strong>如何创建线程池</strong></p>
+<p>构造方法  ThreadPoolExecutor</p>
+<p>工具类 Executors </p>
+<h4 id="Executor"><a href="#Executor" class="headerlink" title="Executor"></a>Executor</h4><p>Executor 框架不仅包括了线程池的管理，还提供了线程工厂、队列以及拒绝策略等，Executor 框架让并发编程变得更加简单</p>
+<p><strong>Executor框架使用流程</strong></p>
+<ol>
+<li>主线程首先要创建实现 <code>Runnable</code> 或者 <code>Callable</code> 接口的任务对象。</li>
+<li>把创建完成的实现 <code>Runnable</code>/<code>Callable</code>接口的 对象直接交给 <code>ExecutorService</code> 执行: <code>ExecutorService.execute（Runnable command）</code>）或者也可以把 <code>Runnable</code> 对象或<code>Callable</code> 对象提交给 <code>ExecutorService</code> 执行（<code>ExecutorService.submit（Runnable task）</code>或 <code>ExecutorService.submit（Callable &lt;T&gt; task）</code>）。</li>
+<li>如果执行 <code>ExecutorService.submit（…）</code>，<code>ExecutorService</code> 将返回一个实现<code>Future</code>接口的对象（我们刚刚也提到过了执行 <code>execute()</code>方法和 <code>submit()</code>方法的区别，<code>submit()</code>会返回一个 <code>FutureTask 对象）。由于 FutureTask</code> 实现了 <code>Runnable</code>，我们也可以创建 <code>FutureTask</code>，然后直接交给 <code>ExecutorService</code> 执行。</li>
+<li>最后，主线程可以执行 <code>FutureTask.get()</code>方法来等待任务执行完成。主线程也可以执行 <code>FutureTask.cancel（boolean mayInterruptIfRunning）</code>来取消此任务的执行。</li>
+</ol>
+<h4 id="ThreadPoolExecutor"><a href="#ThreadPoolExecutor" class="headerlink" title="ThreadPoolExecutor"></a>ThreadPoolExecutor</h4><p><strong>ThreadPoolExecutor 3 个最重要的参数：</strong></p>
+<ul>
+<li><strong><code>corePoolSize</code> :</strong> 核心线程数线程数定义了最小可以同时运行的线程数量。</li>
+<li><strong><code>maximumPoolSize</code> :</strong> 当队列中存放的任务达到队列容量的时候，当前可以同时运行的线程数量变为最大线程数。</li>
+<li><strong><code>workQueue</code>:</strong> 当新任务来的时候会先判断当前运行的线程数量是否达到核心线程数，如果达到的话，新任务就会被存放在队列中。</li>
+</ul>
+<p><strong>拒绝策略</strong></p>
+<p>线程池中，有三个重要的参数，决定拒绝策略：corePoolSize - 核心线程数，也即最小的线程数 workQueue - 阻塞队列  maximumPoolSize - 最大线程数。</p>
+<p>当提交任务数大于 corePoolSize 的时候，会优先将任务放到 workQueue 阻塞队列中。当阻塞队列饱和后，会扩充线程池中线程数，直到达到 maximumPoolSize 最大线程数配置。此时，再多余的任务，则会触发线程池的拒绝策略了。</p>
+<p>总结起来，也就是一句话，<strong>当提交的任务数大于（workQueue.size() + maximumPoolSize ），就会触发线程池的拒绝策略</strong>。</p>
+<p><img src="/img/%E5%9B%BE%E8%A7%A3%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86.png" srcset="/img/loading.gif"></p>
+<p>jdk默认提供了四种拒绝策略：</p>
+<p>CallerRunsPolicy - 当触发拒绝策略，只要线程池没有关闭的话，则使用调用线程直接运行任务。一般并发比较小，性能要求不高，不允许失败。但是，由于调用者自己运行任务，如果任务提交速度过快，可能导致程序阻塞，性能效率上必然的损失较大</p>
+<p>AbortPolicy - 丢弃任务，并抛出拒绝执行 RejectedExecutionException 异常信息。线程池默认的拒绝策略。必须处理好抛出的异常，否则会打断当前的执行流程，影响后续的任务执行。</p>
+<p>DiscardPolicy - 直接丢弃，其他啥都没有</p>
+<p>DiscardOldestPolicy - 当触发拒绝策略，只要线程池没有关闭的话，丢弃阻塞队列 workQueue 中最老的一个任务，并将新任务加入</p>
+<h3 id="7-11-阻塞队列"><a href="#7-11-阻塞队列" class="headerlink" title="7.11 阻塞队列"></a>7.11 阻塞队列</h3><p>不需要再单独考虑同步和线程间通信的问题</p>
+<span class="label label-primary">ArrayBlockingQueue</span>：基于数组实现的一个阻塞队列，在创建ArrayBlockingQueue对象时必须制定容量大小。并且可以指定公平性与非公平性，默认情况下为非公平的，即不保证等待时间最长的队列最优先能够访问队列。
+
+<span class="label label-primary">LinkedBlockingQueue</span>：基于链表实现的一个阻塞队列，在创建LinkedBlockingQueue对象时如果不指定容量大小，则默认大小为Integer.MAX_VALUE。
+
+<span class="label label-primary">PriorityBlockingQueue</span>：以上2种队列都是先进先出队列，而PriorityBlockingQueue却不是，它会按照元素的优先级对元素进行排序，按照优先级顺序出队，每次出队的元素都是优先级最高的元素。注意，此阻塞队列为无界阻塞队列，即容量没有上限（通过源码就可以知道，它没有容器满的信号标志），前面2种都是有界队列。
+
+<span class="label label-primary">DelayQueue</span>：基于PriorityQueue，一种延时阻塞队列，DelayQueue中的元素只有当其指定的延迟时间到了，才能够从队列中获取到该元素。DelayQueue也是一个无界队列，因此往队列中插入数据的操作（生产者）永远不会被阻塞，而只有获取数据的操作（消费者）才会被阻塞。
+
+<p><strong>只要符合生产者-消费者模型的都可以使用阻塞队列</strong></p>
+<h3 id="7-12-AQS"><a href="#7-12-AQS" class="headerlink" title="7.12 AQS"></a>7.12 AQS</h3><h4 id="AQS概述"><a href="#AQS概述" class="headerlink" title="AQS概述"></a>AQS概述</h4><p>AQS 是一个用来构建锁和同步器的框架</p>
+<p><strong>AQS 核心思想是，如果被请求的共享资源空闲，则将当前请求资源的线程设置为有效的工作线程，并且将共享资源设置为锁定状态。如果被请求的共享资源被占用，那么就需要一套线程阻塞等待以及被唤醒时锁分配的机制，这个机制 AQS 是用 CLH 队列锁实现的，即将暂时获取不到锁的线程加入到队列中。</strong></p>
+<p><strong>CLH</strong></p>
+<p>定义了一个volatile修饰的共享变量state来表示同步状态。使用一个FIFO队列存储排队的线程资源。 使用 CAS 对该同步状态进行原子操作实现对其值的修改</p>
+<p><strong>AQS 定义两种资源共享方式</strong></p>
+<ul>
+<li><p>Exclusive        <code>ReentrantLock</code></p>
+<p>（独占）：只有一个线程能执行。又可分为公平锁和非公平锁：</p>
+<ul>
+<li>公平锁：按照线程在队列中的排队顺序，先到者先拿到锁</li>
+<li>非公平锁：当线程要获取锁时，无视队列顺序直接去抢锁，谁抢到就是谁的</li>
+</ul>
+</li>
+<li><p><strong>Share</strong>（共享）：多个线程可同时执行</p>
+</li>
+</ul>
+<h4 id="AQS组件"><a href="#AQS组件" class="headerlink" title="AQS组件"></a>AQS组件</h4><p><strong>CountDownLatch</strong></p>
+<p>这个工具通常用来控制线程等待，它可以让某一个线程等待直到倒计时结束，再开始执行。</p>
+<p>执行方countDownLatch.countDown();    等待方awit</p>
+<p><strong>适用场景：</strong></p>
+<ol>
+<li>某一线程在开始运行前等待 n 个线程执行完毕。将 CountDownLatch 的计数器初始化为 n ：<code>new CountDownLatch(n)</code>，每当一个任务线程执行完毕，就将计数器减 1 <code>countdownlatch.countDown()</code>，当计数器的值变为 0 时，在<code>CountDownLatch上 await()</code> 的线程就会被唤醒。一个典型应用场景就是启动一个服务时，主线程需要等待多个组件加载完毕，之后再继续执行。</li>
+<li>实现多个线程开始执行任务的最大并行性。注意是并行性，不是并发，强调的是多个线程在某一时刻同时开始执行。类似于赛跑，将多个线程放到起点，等待发令枪响，然后同时开跑。做法是初始化一个共享的 <code>CountDownLatch</code> 对象，将其计数器初始化为 1 ：<code>new CountDownLatch(1)</code>，多个线程在开始执行任务前首先 <code>coundownlatch.await()</code>，当主线程调用 countDown() 时，计数器变为 0，多个线程同时被唤醒。</li>
+</ol>
+<p><strong>CyclicBarrier</strong> 回环栅栏</p>
+<p>CyclicBarrier一般的使用场景是控制一组线程同时开始执行，就像跑步比赛一样，当所有运动员准备就绪才可以开始跑。</p>
+<p><strong>Sephmore 信号量</strong></p>
+<h3 id="7-13-Automic"><a href="#7-13-Automic" class="headerlink" title="7.13 Automic"></a>7.13 Automic</h3><p><strong>基本类型</strong></p>
+<p>使用原子的方式更新基本类型</p>
+<ul>
+<li><code>AtomicInteger</code>：整形原子类</li>
+<li><code>AtomicLong</code>：长整型原子类</li>
+<li><code>AtomicBoolean</code>：布尔型原子类</li>
+</ul>
+<p><strong>数组类型</strong></p>
+<p>使用原子的方式更新数组里的某个元素</p>
+<ul>
+<li><code>AtomicIntegerArray</code>：整形数组原子类</li>
+<li><code>AtomicLongArray</code>：长整形数组原子类</li>
+<li><code>AtomicReferenceArray</code>：引用类型数组原子类</li>
+</ul>
+<p><strong>引用类型</strong></p>
+<ul>
+<li><code>AtomicReference</code>：引用类型原子类</li>
+<li><code>AtomicStampedReference</code>：原子更新带有版本号的引用类型。该类将整数值与引用关联起来，可用于解决原子的更新数据和数据的版本号，可以解决使用 CAS 进行原子更新时可能出现的 ABA 问题。</li>
+<li><code>AtomicMarkableReference</code> ：原子更新带有标记位的引用类型</li>
+</ul>
+<p><strong>对象的属性修改类型</strong></p>
+<ul>
+<li><code>AtomicIntegerFieldUpdater</code>：原子更新整形字段的更新器</li>
+<li><code>AtomicLongFieldUpdater</code>：原子更新长整形字段的更新器</li>
+<li><code>AtomicReferenceFieldUpdater</code>：原子更新引用类型字段的更新器</li>
+</ul>
+<h2 id="八、java8特性"><a href="#八、java8特性" class="headerlink" title="八、java8特性"></a>八、java8特性</h2><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>[^1]java多线程 <a target="_blank" rel="noopener" href="https://juejin.im/post/6844903941830869006#heading-24">https://juejin.im/post/6844903941830869006#heading-24</a></p>
+<p>[^2]java多线程 <a target="_blank" rel="noopener" href="https://blog.csdn.net/haozhugogo/article/details/55050681">https://blog.csdn.net/haozhugogo/article/details/55050681</a></p>
+<p>[^3]java并发之synchronized <a target="_blank" rel="noopener" href="https://blog.csdn.net/javazejian/article/details/72828483">https://blog.csdn.net/javazejian/article/details/72828483</a></p>
+<p>[^4]javaGuide guide哥的官网 <a target="_blank" rel="noopener" href="https://snailclimb.gitee.io/javaguide/#/">https://snailclimb.gitee.io/javaguide/#/</a></p>
+<p>[^5]j泛型 <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000014120746">https://segmentfault.com/a/1190000014120746</a></p>
+<p>[^6]hashcode与equals <a target="_blank" rel="noopener" href="https://www.cnblogs.com/skywang12345/p/3324958.html">https://www.cnblogs.com/skywang12345/p/3324958.html</a></p>
+<p>[^7]内部类 <a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/java-inner-class-intro.html">https://www.runoob.com/w3cnote/java-inner-class-intro.html</a></p>
+<p>[^8]讲的还不错的hashmap长度为何为2的幂次方 <a target="_blank" rel="noopener" href="https://blog.csdn.net/gududedabai/article/details/85784161?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.baidujs&amp;dist_request_id=1328679.26088.16162471776581913&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.baidujs">https://blog.csdn.net/gududedabai/article/details/85784161?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.baidujs&amp;dist_request_id=1328679.26088.16162471776581913&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.baidujs</a></p>
+<p>[^9] 看起来还不错的hashmap解析，但是我还没看 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/skywang12345/p/3310835.html">https://www.cnblogs.com/skywang12345/p/3310835.html</a></p>
+<p>[^10] 很好的图文分析：hashmap遍历 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/Zz6mofCtmYpABDL1ap04ow">https://mp.weixin.qq.com/s/Zz6mofCtmYpABDL1ap04ow</a></p>
+<p>[^11]volatile <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/138819184">https://zhuanlan.zhihu.com/p/138819184</a></p>
+<p>[^12]拒绝策略 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/eric-fang/p/11584142.html">https://www.cnblogs.com/eric-fang/p/11584142.html</a></p>
+<p>[^13]阻塞队列 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/dolphin0520/p/3932906.html">https://www.cnblogs.com/dolphin0520/p/3932906.html</a></p>
+<p>[^14]反射 <a target="_blank" rel="noopener" href="https://blog.csdn.net/tongdanping/article/details/103252352">https://blog.csdn.net/tongdanping/article/details/103252352</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/01/01/MyBatis/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">mybatis</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/01/SpringBoot/">
+                        <span class="hidden-mobile">springboot</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "javal&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
