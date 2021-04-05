@@ -1,0 +1,1059 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="java">
+  <meta name="author" content="吴天野">
+  <meta name="keywords" content="">
+  <title>springboot - 吴天野的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>吴天野的博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      吴天野
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-11-01 20:30" pubdate>
+        2020年11月1日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      7.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      84
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">springboot</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="SpringBoot-学习笔记"><a href="#SpringBoot-学习笔记" class="headerlink" title="SpringBoot 学习笔记"></a>SpringBoot 学习笔记</h1><h2 id="一、Spring"><a href="#一、Spring" class="headerlink" title="一、Spring"></a>一、Spring</h2><h3 id="1-1-Spring概述"><a href="#1-1-Spring概述" class="headerlink" title="1.1 Spring概述"></a>1.1 Spring概述</h3><p>Spring框架是一个轻量级的企业级开发的一站式解决方案。是一个为Java应用程序的开发提供了综合、广泛的基础性支持的Java平台。spring框架指spring framework，它集合了20多个模块协助程序员进行高效率的开发。</p>
+<p>Spring使用简单的POJO来进行企业级开发。每一个被spring管理的java对象都称之为Bean，Spring使用IOC容器来初始化对象，解决对象间的依赖管理和对象的使用。</p>
+<p><strong>Spring四大原则</strong></p>
+<p>①使用POJO进行轻量级和最小侵入式开发</p>
+<p>②通过依赖注入和基于接口编程实现松耦合</p>
+<p>③通过AOP和默认习惯进行声明式编程</p>
+<p>④使用AOP和模板减少模式化代码</p>
+<h3 id="1-2-Spring模块结构"><a href="#1-2-Spring模块结构" class="headerlink" title="1.2 Spring模块结构"></a>1.2 Spring模块结构</h3><p><strong>Spring模块结构</strong></p>
+<p>Spring 总共大约有 20 个模块，这些组件被分别整合在核心容器（Core Container） 、 AOP（Aspect Oriented Programming）和设备支持（Instrmentation） 、数据访问与集成（Data Access/Integeration） 、 Web、 消息（Messaging） 、 Test等 6 个模块中</p>
+<p><img src="/img/spring_kuangjia.png" srcset="/img/loading.gif"></p>
+<p>常用核心模块介绍：</p>
+<p><strong>1、核心容器(Core)</strong></p>
+<p>这是Spring框架最基础的部分，它提供了依赖注入（Dependency Injection）特征来实现容器对Bean的管理。这里最基本的概念是BeanFactory，它是任何Spring应用的核心。BeanFactory是工厂模式的一个实现，它使用IoC将应用配置和依赖说明从实际的应用代码中分离出来。</p>
+<p><strong>2、AOP模块</strong></p>
+<p>AOP即面向切面编程技术，Spring在它的AOP模块中提供了对面向切面编程的丰富支持。确保了Spring和其他AOP框架的共通性。这个模块将元数据编程引入Spring</p>
+<p>AOP允许通过分离应用的业务逻辑与系统级服务（例如安全和事务管理）进行内聚性的开发。应用对象只实现它们应该做的——完成业务逻辑——仅此而已。它们并不负责其它的系统级关注点，例如日志或   支持。</p>
+<p><strong>3、对象/关系映射集成模块ORM</strong></p>
+<p>Spring通过提供ORM模块，支持我们在直接JDBC之上使用一个对象/关系映射映射(ORM)工具，Spring支持集成主流的ORM框架，如Hiberate,JDO和iBATISSQLMaps。Spring的事务管理同样支持以上所有ORM框架及JDBC。</p>
+<p><strong>4、JDBC抽象和DAO模块</strong></p>
+<p>提供了一个JDBC的抽象层，简化了JDBC，保证了数据库代码的简洁，并能避免数据库资源错误关闭导致的问题，它在各种不同的数据库的错误信息之上，提供了一个统一的异常访问层。它还利用Spring的AOP模块给Spring应用中的对象提供事务管理服务</p>
+<p><strong>5、Spring的Web模块</strong></p>
+<p>Web上下文模块建立于applicaiton context之上，提供了一个适合于Web应用的上下文。另外，这个模块还提供了一些面向服务支持。例如：实现文件上传的multipart请求，它也提供了Spring和其它Web框架的集成，比如Struts、WebWork。</p>
+<p><strong>6、应用上下文（Context）模块</strong></p>
+<p>核心模块的BeanFactory使Spring成为一个容器，而上下文模块使它成为一个框架。Web上下文模块建立于应用上下文模块之上，提供了一个适合于Web应用的上下文。该模块还提供了一些面向服务支持这个模块扩展了BeanFactory的概念，增加了对国际化（I18N）消息、事件传播以及验证的支持。</p>
+<p>另外，这个模块还提供了许多企业服务，例如电子邮件、JNDI访问、EJB集成、远程以及时序调度（scheduling）服务。也包括对模版框架例如Velocity和FreeMarker集成的支持。</p>
+<p><strong>7、Spring的MVC框架</strong></p>
+<p>Spring为构建Web应用提供了一个功能全面的MVC框架。虽然Spring可以很容易地与其它MVC框架集成，例如Struts2，但Spring的MVC框架使用IoC对控制逻辑和业务对象提供了完全的分离。</p>
+<p><strong>8、Spring Aspects</strong> ：</p>
+<p>该模块为与AspectJ的集成提供支持。</p>
+<p><strong>9、Spring Test</strong> : </p>
+<p>提供了对 JUnit 和 TestNG 测试的支持。</p>
+<h3 id="1-3-IOC"><a href="#1-3-IOC" class="headerlink" title="1.3 IOC"></a>1.3 IOC</h3><p>控制反转（Inversion of Control，缩写为IoC），是面向对象编程中的一种设计原则，用来减低代码耦合度。其思想是反转资源获取的方向。Spring IOC通过依赖注入来实现，所谓依赖注入指的是容器负责创建对象和维护对象间的依赖关系。</p>
+<p>SpringIOC通过依赖注入，来创建对象和维护对象间的依赖关系并管理这些对象的整个生命周期。</p>
+<span class="label label-success">IOC的优点是</span>
+
+<p>①实现了松耦合</p>
+<p>②使应用易于测试</p>
+<p>③实现资源的可配置和易管理</p>
+<h4 id="Spring-IOC容器"><a href="#Spring-IOC容器" class="headerlink" title="Spring IOC容器"></a>Spring IOC容器</h4><p>Spring 提供了以下两种不同类型的容器。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>容器 &amp; 描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>BeanFactory 容器它是最简单的容器，给 DI 提供了基本的支持，它用 org.springframework.beans.factory.BeanFactory 接口来定义。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Spring ApplicationContext 容器是对BeanFactory的拓展，该容器添加了更多的企业特定的功能，例如从一个属性文件中解析文本信息的能力，发布应用程序事件给感兴趣的事件监听器的能力。该容器是由 org.springframework.context.ApplicationContext 接口定义。其主要有四种实现：<span class="label label-info">ClassPathXmlApplicationContext</span>、  <span class="label label-info">FileSystemXmlApplicationContext</span>、<span class="label label-info">XmlWebApplicationContext</span>、<span class="label label-info">AnnotationConfigApplicationContext（基于Java配置） | **面试题——FileSystemResource和ClassPathResource有何区别？：** 回答： 在FileSystemResource中需要给出spring-config.xml文件在你项目中的相对路径或者绝对路径。在ClassPathResource中spring会在ClassPath中自动搜寻配置文件，所以要把ClassPathResource文件放在ClassPath下。如果将spring-config.xml保存在了src文件夹下的话，只需给出配置文件的名称即可，因为src文件夹是默认。简而言之，ClassPathResource在环境变量中读取配置文件，FileSystemResource在配置文件（xml文件）中读取配置文件。 #### Bean的概述 bean 是一个被实例化，组装，并通过 Spring IoC 容器所管理的对象。 Spring提供使用xml、注解、java配置实现bean的创建和注入，这些配置被称为配置元数据，所谓元数据即描述数据的数据。元数据本身不具备任何可执行能力，只能通过外界代码来对这些元数据进行解析后进行有意义的操作。 {% label success </span></td>
+</tr>
+</tbody></table>
+<h4 id="bean的作用域"><a href="#bean的作用域" class="headerlink" title="bean的作用域"></a>bean的作用域</h4><p>@Scope：</p>
+<ol>
+<li>singleton   全容器共享一个实例 </li>
+<li>prototype  每次调用新建</li>
+<li>request      每一个http请求新建一个</li>
+<li>session      每一个httpsession新建一个 </li>
+<li>globalsession   每一个globalhttpsession新建一个 </li>
+</ol>
+<h4 id="bean的生命周期"><a href="#bean的生命周期" class="headerlink" title="bean的生命周期"></a>bean的生命周期</h4><p>beanfactory 负责管理bean的生命周期</p>
+<p>Bean的生命周期可以表达为：Bean的定义——Bean的初始化——Bean的使用——Bean的销毁</p>
+<ul>
+<li>①通过构造器或工厂方法创建Bean实例</li>
+<li>②为Bean的属性设置值和对其他Bean的引用</li>
+<li>③BeanNameAware的setBeanName方法。</li>
+<li>④BeanFactoryAware的setBeanFactory方法</li>
+<li>⑤将Bean实例传递给Bean前置处理器的postProcessBeforeInitialization方法</li>
+<li>⑥如果Bean实现了<code>InitializingBean</code>接口，执行<code>afterPropertiesSet()</code>方法。</li>
+<li>⑦调用Bean的初始化方法(init-method)</li>
+<li>⑧将Bean实例传递给Bean后置处理器的postProcessAfterInitialization方法</li>
+<li>⑨Bean可以使用了</li>
+<li>⑩当容器关闭时,调用Bean的销毁方法(destroy-method)</li>
+</ul>
+<p><img src="/img/bean_life.jpg" srcset="/img/loading.gif"></p>
+<p>java配置方式：initMethod和destroyMethod</p>
+<p>xml配置：init-method和destroy-method</p>
+<p> JSR-250 ：@PostConstruct 和 @PreDestroy 注解</p>
+<h4 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h4><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>依赖注入类型 &amp; 描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Constructor-based dependency injection当容器调用带有多个参数的构造函数类时，实现基于构造函数的 DI，每个代表在其他类中的一个依赖关系。</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Setter-based dependency injection基于 setter 方法的 DI 是通过在调用无参数的构造函数或无参数的静态工厂方法实例化 bean 之后容器调用 beans 的 setter 方法来实现的。</td>
+</tr>
+</tbody></table>
+<p><strong>构造器注入总结：</strong></p>
+<pre><code class="hljs java"><span class="hljs-comment">// Spring4.3+之后，constructor注入支持非显示注入方式。</span>
+<span class="hljs-comment">// @Autowired</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">DI</span><span class="hljs-params">(DependencyA dependencyA, DependencyB dependencyB, DependencyC dependencyC)</span> </span>&#123;
+    <span class="hljs-keyword">this</span>.dependencyA = dependencyA;
+    <span class="hljs-keyword">this</span>.dependencyB = dependencyB;
+    <span class="hljs-keyword">this</span>.dependencyC = dependencyC;
+&#125;</code></pre>
+
+<span class="label label-success">优点</span>
+
+<p>①能够保证注入的组件不可变，并且确保需要的依赖不为空</p>
+<p>②构造器注入的依赖总是能够在返回客户端（组件）代码的时候保证完全初始化的状态</p>
+<p>③依赖关系只能在构造器中设定，则只有组件的创建者才能改变组件的依赖关系。对组件的调用者而言，组件内部的依赖关系完全透明，更符合高内聚的原则</p>
+<span class="label label-warning">缺点</span>
+
+<p>①对于复杂的依赖关系，如果采用构造注入，会导致构造器过于臃肿。根据单一职责原则，此时应该考虑重构。</p>
+<p>②可能会出现循环依赖问题</p>
+<p><strong>setter注入总结：</strong></p>
+<pre><code class="hljs java"><span class="hljs-comment">// setter注入</span>
+<span class="hljs-meta">@Autowired</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setDependencyA</span><span class="hljs-params">(DependencyA dependencyA)</span> </span>&#123;
+    <span class="hljs-keyword">this</span>.dependencyA = dependencyA;
+&#125;
+
+<span class="hljs-meta">@Autowired</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setDependencyB</span><span class="hljs-params">(DependencyB dependencyB)</span> </span>&#123;
+    <span class="hljs-keyword">this</span>.dependencyB = dependencyB;
+&#125;</code></pre>
+
+<span class="label label-success">优点</span>
+
+<p>①setter的方式能让类在之后重新配置或者重新注入。</p>
+<p>②允许为空，可以解决循环依赖问题</p>
+<span class="label label-warning">缺点</span>
+
+<p>①对于仅使用setter注入的依赖对象需要进行非空检查</p>
+<span class="label label-primary">**最好的解决方案是用构造器参数实现强制依赖，setter方法实现可选依赖**</span>
+
+
+
+<p><strong>字段注入总结：</strong></p>
+<pre><code class="hljs java"><span class="hljs-comment">// 字段注入</span>
+<span class="hljs-meta">@Autowired</span> <span class="hljs-keyword">private</span> DependencyA dependencyA; 
+
+<span class="hljs-meta">@Autowired</span> <span class="hljs-keyword">private</span> DependencyB dependencyB;</code></pre>
+
+<span class="label label-success">优点</span>
+
+<p>①简洁、快捷</p>
+<span class="label label-warning">缺点</span>
+
+<p>①不易察觉违反单一职责原则</p>
+<p>②有可能出现循环依赖问题，而且启动不会报错，只有在使用时才会报错。<br>③无法注入final<br>字段注入方式无法注入final字段，只有构造器注入才能注入final字段<br>④隐藏了依赖关系<br>外界可以看到构造器和setter，但无法看到私有字段，自然无法了解所需依赖。使用依赖注入容器意味着类不再对依赖对象负责，获取依赖对象的职责从类中抽离出来，IoC容器会帮你装配。当类不再为依赖对象负责，它应该更明确的使用公有的接口方法或构造器，使用这种方式能很清晰的了解类需要什么，也能明确它是可选的(setter注入)还是强制的(构造器注入)。<br>⑤依赖注入容器紧耦合<br>依赖注入框架的核心思想之一就是受容器管理的类不应该去依赖容器所使用的依赖对象。换句话说，这个类应该是一个简单的POJO(Plain Ordinary Java Object)能够被单独实例化并且你也能为它提供它所需的依赖。只有这样，你才能在单元测试中实例化这个类而不必去启动依赖注入容器，实现测试分离(启动容器更多是集成测试)。然而，当使用变量直接注入时，没有一种方式能直接地实例化这个类并且满足其所有的依赖。这意味着需要手动new出来依赖对象或者只能在IoC Container范围使用。</p>
+<h4 id="自动装配"><a href="#自动装配" class="headerlink" title="自动装配"></a>自动装配</h4><p>自动装配是为了将依赖注入“自动化”的一个简化配置的操作</p>
+<p>自动装配就是不使用<constructor-arg><code>和</code><property>注解进行依赖注入</p>
+ <span class="label label-info">bean的自动装配模式：</span>
+
+<ol>
+<li>no：这是Spring框架的默认设置，在该设置下自动装配是关闭的，开发者需要自行在bean定义中用标签明确的设置依赖关系。</li>
+<li>byName：根据bean名称设置依赖关系。<span class="label label-info">Resource注解使用byName</span></li>
+<li>byType：根据bean类型设置依赖关系。<span class="label label-info">Autowired注解使用bytype</span></li>
+<li>constructor：造器的自动装配和byType模式类似，但是仅仅适用于与有构造器相同参数的bean，如果在容器中没有找到与构造器参数类型一致的bean，那么将会抛出异常。</li>
+<li>autodetect：该模式自动探测使用构造器自动装配或者byType自动装配。首先，首先会尝试找合适的带参数的构造器，如果找到的话就是用构造器自动装配，如果在bean内部没有找到相应的构造器或者是无参构造器，容器就会自动选择byTpe的自动装配方式。</li>
+</ol>
+<h3 id="1-4-Spring配置"><a href="#1-4-Spring配置" class="headerlink" title="1.4 Spring配置"></a>1.4 Spring配置</h3><p>将Spring配置到应用开发中有以下三种方式：1.基于XML的配置      2.基于注解的配置      3.基于Java的配置</p>
+<p><strong>注解配置</strong></p>
+<span class="label label-primary">声明Bean的注解：</span>
+
+<p>@Component</p>
+<p>@Service   service层</p>
+<p>@Repository   dao层</p>
+<p>@Controller    controller层</p>
+<div class="note note-danger">
+            <p><strong>面试题——@Component和@Bean的区别：</strong> </p>
+          </div>
+
+<div class="note note-success">
+            <p>回答：</p><ol><li>作用对象不同: <code>@Component</code> 注解作用于类，而<code>@Bean</code>注解作用于方法。</li><li><code>@Component</code>通常是通过类路径扫描来自动侦测以及自动装配到Spring容器中（我们可以使用 <code>@ComponentScan</code> 注解定义要扫描的路径从中找出标识了需要装配的类自动装配到 Spring 的 bean 容器中）。<code>@Bean</code> 注解通常是我们在标有该注解的方法中定义产生这个 bean,<code>@Bean</code>告诉了Spring这是某个类的示例，当我需要用它的时候还给我。</li><li><code>@Bean</code> 注解比 <code>Component</code> 注解的自定义性更强，而且很多地方我们只能通过 <code>@Bean</code> 注解来注册bean。比如当我们引用第三方库中的类需要装配到 <code>Spring</code>容器时，则只能通过 <code>@Bean</code>来实现。</li></ol>
+          </div>
+
+
+
+<span class="label label-info">使用Bean的注解：</span>
+
+<table>
+<thead>
+<tr>
+<th>注解</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@Required</td>
+<td>注解应用于 bean 属性的 setter 方法。</td>
+</tr>
+<tr>
+<td>@Autowired</td>
+<td>@Autowired是spring自带的注解。可以应用到变量、setter方法、构造函数上。默认采用byType装配模式，可以配合@Qualifier按名称匹配。</td>
+</tr>
+<tr>
+<td>@Resource</td>
+<td>@Resource是JSR250规范的实现。可以写在字段上,或setter方法上。默认采用byName装配模式</td>
+</tr>
+<tr>
+<td>@Inject</td>
+<td>@Inject是JSR330中的规范。可以应用到变量、setter方法、构造函数上。默认采用byType装配模式。可以配合@Named按名称匹配。可以通过配置type属性使用byType装配模式</td>
+</tr>
+</tbody></table>
+<p>@Autowired写在构造方法和写在变量上有何不同： </p>
+<p>构造方法上即使用Constructor-based依赖注入</p>
+<p>但是由于java变量的初始化顺序为静态变量或静态语句块–&gt;实例变量或初始化语句块–&gt;构造方法–&gt;@Autowired。因此在构造方法中调用@Autowired声明的变量会报错，因为执行构造方法时尚未执行@Autowired。</p>
+<pre><code class="hljs java"><span class="hljs-number">1</span> <span class="hljs-meta">@Autowired</span>
+<span class="hljs-number">2</span> <span class="hljs-keyword">private</span> User user;
+<span class="hljs-number">3</span> <span class="hljs-keyword">private</span> String school;
+<span class="hljs-number">4</span> 
+<span class="hljs-number">5</span> <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">UserAccountServiceImpl</span><span class="hljs-params">()</span></span>&#123;
+<span class="hljs-number">6</span>     <span class="hljs-keyword">this</span>.school = user.getSchool();  <span class="hljs-comment">//报错，尚未执行@Autowired</span>
+<span class="hljs-number">7</span> &#125;</code></pre>
+
+<pre><code class="hljs java"><span class="hljs-number">1</span> <span class="hljs-keyword">private</span> User user;
+<span class="hljs-number">2</span> <span class="hljs-keyword">private</span> String school;
+<span class="hljs-number">3</span> 
+<span class="hljs-number">4</span> <span class="hljs-meta">@Autowired</span>
+<span class="hljs-number">5</span> <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">UserAccountServiceImpl</span><span class="hljs-params">(User user)</span></span>&#123;
+<span class="hljs-number">6</span>     <span class="hljs-keyword">this</span>.user = user;
+<span class="hljs-number">7</span>     <span class="hljs-keyword">this</span>.school = user.getSchool();  <span class="hljs-comment">//正确</span>
+<span class="hljs-number">8</span> &#125;</code></pre>
+
+
+
+<p><strong>JAVA 配置</strong></p>
+<p>@Configuration 声明为配置类</p>
+<p>@Bean  注解在方法上，声明当前方法的返回值是一个Bean</p>
+<span class="label label-info">在spring容器中，只要容器存在某个bean，就能在另一个bean的声明方法的参数中写入</span>
+
+<div class="note note-danger">
+            <p><strong>面试题——什么是JAVA Config：</strong> </p>
+          </div>
+
+<div class="note note-success">
+            <p>回答：</p><p>SpringJavaConfig是Spring社区的产品，提供了配置SpringIoC容器的纯Java方法。优点是可以充分利用面向对象功能，减少xml配置，同时保证了类型安全和重构友好。</p>
+          </div>
+
+
+
+<h3 id="1-5-AOP"><a href="#1-5-AOP" class="headerlink" title="1.5 AOP"></a>1.5 AOP</h3><p>AOP(Aspect-Oriented Programming:面向切面编程)能够将那些与业务无关，<strong>却为业务模块所共同调用的逻辑或责任（例如事务处理、日志管理、权限控制等）封装起来</strong>，便于<strong>减少系统的重复代码</strong>，<strong>降低模块间的耦合度</strong>，并<strong>有利于未来的可拓展性和可维护性</strong>。</p>
+<p>OOP只有继承和实现，不仅使耦合度增强，继承也只能为单继承，AOP弥补了OOP的不足，使得一组类共享相同的行为</p>
+<p>Spring支持AspectJ的注解式切面编程</p>
+<pre><code class="hljs java"><span class="hljs-comment">// 编写拦截规则的注解——自定义注解</span>
+<span class="hljs-meta">@Target(ElementType.METHOD)</span>
+<span class="hljs-meta">@Retention(RetentionPolicy.RUNTIME)</span>
+<span class="hljs-meta">@Documented</span>
+<span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> Action &#123;
+  <span class="hljs-function">String <span class="hljs-title">name</span><span class="hljs-params">()</span></span>;
+&#125;</code></pre>
+
+<pre><code class="hljs java"><span class="hljs-meta">@Aspect</span>  <span class="hljs-comment">//定义切面</span>
+<span class="hljs-meta">@Component</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">logAspect</span> </span>&#123;
+    <span class="hljs-meta">@Pointcut(&quot;&quot;)</span>   <span class="hljs-comment">// 定义切点</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">annotationPointCut</span><span class="hljs-params">()</span></span>&#123;&#125;
+    
+    <span class="hljs-meta">@After(&quot;annotationPointCut()&quot;)</span>   <span class="hljs-comment">// 定义建言</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">after</span><span class="hljs-params">(JoinPoint point)</span></span>&#123;
+        
+    &#125;
+    
+&#125;</code></pre>
+
+
+
+<h3 id="1-6-Spring高级话题"><a href="#1-6-Spring高级话题" class="headerlink" title="1.6 Spring高级话题"></a>1.6 Spring高级话题</h3><h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><p>事件（ApplicationEvent）为bean之间的消息通信提供了支持</p>
+<p>Spring的事件遵循如下流程：</p>
+<ol>
+<li>定义事件</li>
+<li>定义事件监听器</li>
+<li>使用容器发布事件</li>
+</ol>
+<p>Spring提供了以下5种标准的事件：</p>
+<ol>
+<li>上下文更新事件（ContextRefreshedEvent）：该事件会在ApplicationContext被初始化或者更新时发布。也可以在调用ConfigurableApplicationContext接口中的refresh()方法时被触发。</li>
+<li>上下文开始事件（ContextStartedEvent）：当容器调用ConfigurableApplicationContext的Start()方法开始/重新开始容器时触发该事件。</li>
+<li>上下文停止事件（ContextStoppedEvent）：当容器调用ConfigurableApplicationContext的Stop()方法停止容器时触发该事件。</li>
+<li>上下文关闭事件（ContextClosedEvent）：当ApplicationContext被关闭时触发该事件。容器被关闭时，其管理的所有单例Bean都被销毁。</li>
+<li>请求处理事件（RequestHandledEvent）：在Web应用中，当一个http请求（request）结束触发该事件。</li>
+</ol>
+<pre><code class="hljs java"><span class="hljs-comment">// 自定义event</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DemoEvent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ApplicationEvent</span></span>&#123;
+
+&#125;
+
+<span class="hljs-comment">//事件监听器。当此事件被发布后，会自动触发</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ApplicationEventListener</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ApplicationListener</span>&lt;<span class="hljs-title">ApplicationEvent</span>&gt; </span>&#123;
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onApplicationEvent</span><span class="hljs-params">(ApplicationEvent applicationEvent)</span></span>&#123;
+  &#125;
+&#125;
+
+<span class="hljs-comment">//事件发布器</span>
+<span class="hljs-meta">@Component</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DemoPublisher</span></span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">publish</span><span class="hljs-params">(String msg)</span></span>&#123;
+        applicationContext.publishEvent(<span class="hljs-keyword">new</span> DemoEvent(<span class="hljs-keyword">this</span>, msg));
+    &#125;
+&#125;</code></pre>
+
+<h4 id="异步-Async"><a href="#异步-Async" class="headerlink" title="异步 @Async"></a>异步 @Async</h4><h4 id="计划任务-Scheduled"><a href="#计划任务-Scheduled" class="headerlink" title="计划任务 @Scheduled"></a>计划任务 @Scheduled</h4><h4 id="条件注解-Conditional"><a href="#条件注解-Conditional" class="headerlink" title="条件注解 @Conditional"></a>条件注解 @Conditional</h4><h4 id="Spring涉及的那些设计模式"><a href="#Spring涉及的那些设计模式" class="headerlink" title="Spring涉及的那些设计模式"></a>Spring涉及的那些设计模式</h4><ul>
+<li>代理模式—在AOP和remoting中被用的比较多。</li>
+<li>单例模式—在spring配置文件中定义的bean默认为单例模式。</li>
+<li>模板方法—用来解决代码重复的问题。比如.RestTemplate,JmsTemplate,JpaTemplate。</li>
+<li><strong>包装器设计模式</strong> : 我们的项目需要连接多个数据库，而且不同的客户在每次访问中根据需要会去访问不同的数据库。这种模式让我们可以根据客户的需求能够动态切换不同的数据源。</li>
+<li><strong>观察者模式:</strong> Spring 事件驱动模型就是观察者模式很经典的一个应用。</li>
+<li><strong>适配器模式</strong> :Spring AOP 的增强或通知(Advice)使用到了适配器模式、spring MVC 中也是用到了适配器模式适配<code>Controller</code>。</li>
+<li>工厂模式—BeanFactory用来创建对象的实例</li>
+</ul>
+<h2 id="二、SpringMVC"><a href="#二、SpringMVC" class="headerlink" title="二、SpringMVC"></a>二、SpringMVC</h2><h3 id="2-1-SpringMVC概述"><a href="#2-1-SpringMVC概述" class="headerlink" title="2.1 SpringMVC概述"></a>2.1 SpringMVC概述</h3><p>model + view + controller</p>
+<div class="note note-danger">
+            <p><strong>面试题——SpringMVC和三层架构的关系：</strong> </p>
+          </div>
+
+<div class="note note-success">
+            <p>回答：</p><p>三层架构指 展现层 应用层  数据访问层</p><p>MVC只存在展现层</p>
+          </div>
+
+<div class="note note-danger">
+            <p><strong>面试题——Spring  SpringMVC Springboot的关系：</strong> </p>
+          </div>
+
+<div class="note note-success">
+            <p>回答：</p><p>SpringMVC是Spring的一个模块</p><p>SpringBoot建立在Spring框架之上，设计目的是为了简化spring的搭建和开发过程。</p>
+          </div>
+
+<h3 id="2-2基本配置"><a href="#2-2基本配置" class="headerlink" title="2.2基本配置"></a>2.2基本配置</h3><p><strong>WebMvcConfigurerAdapter</strong></p>
+<pre><code class="hljs java"><span class="hljs-comment">// 静态资源配置</span>
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addResourceHandlers</span><span class="hljs-params">(ResourceHandlerRegistry registry)</span> </span>&#123;
+    
+&#125;</code></pre>
+
+<pre><code class="hljs java"><span class="hljs-comment">// 拦截器配置</span>
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addInterceptors</span><span class="hljs-params">(InterceptorRegistry registry)</span> </span>&#123;
+    
+&#125;</code></pre>
+
+
+
+<p><strong>ControllerAdvice</strong></p>
+<p>将对于控制器的全局配置放在同一个位置</p>
+<p>@ExceptionHandler  全局异常配置</p>
+<p>@ModelAttribute   绑定键值对到model</p>
+<p>@InitBinder  自动绑定前台参数到model</p>
+<p><strong>Spring过滤器和拦截器的区别</strong></p>
+<p>规范不同：过滤器是servlet规范中定义的；拦截器是spring容器内的 </p>
+<p>使用范围不同：过滤器只能用于web程序；拦截器既可以用于web程序，也可以用于application程序中</p>
+<p>使用的资源不同：拦截器是spring的组件，能使用spring容器中的所有资源，service对象等都能通过ioc注入其中。过滤器则不能</p>
+<p>起效范围不同：过滤器只在servlet前后起效。拦截器能深入到方法、异常前后，具有更大的弹性</p>
+<h2 id="三、SpringBoot"><a href="#三、SpringBoot" class="headerlink" title="三、SpringBoot"></a>三、SpringBoot</h2><h3 id="3-1-SpringBoot基础"><a href="#3-1-SpringBoot基础" class="headerlink" title="3.1 SpringBoot基础"></a>3.1 SpringBoot基础</h3><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>springboot建立在spring框架之上，简化了搭建和开发过程。使用“习惯优于配置”的理念让项目快速运行，使用springboot很容易创建一个独立运行、准生产级别的基于spring框架的项目。</p>
+<h4 id="核心功能"><a href="#核心功能" class="headerlink" title="核心功能"></a>核心功能</h4><p>独立运行的Spring项目</p>
+<p>内嵌的servlet容器</p>
+<p>starter简化maven配置</p>
+<p>java配置和注解配置组合</p>
+<p>应用监控</p>
+<p>自动配置bean </p>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><p>快速构建项目</p>
+<p>更少、更简易的配置</p>
+<p>对主流开发框架的无配置集成</p>
+<p>内嵌servlet容器，项目可独立运行</p>
+<p>提供运行时的应用监控</p>
+<h4 id="Spring-Boot-Stater"><a href="#Spring-Boot-Stater" class="headerlink" title="Spring Boot Stater"></a>Spring Boot Stater</h4><p>启动器是一套方便的依赖描述符，它可以放在自己的程序中。你可以一站式的获取你所需要的 Spring 和相关技术，而不需要依赖描述符的通过示例代码搜索和复制黏贴的负载。</p>
+<h4 id="springboot自动装配原理"><a href="#springboot自动装配原理" class="headerlink" title="springboot自动装配原理"></a>springboot自动装配原理</h4><p>也可以理解为<strong>springboot运行原理</strong></p>
+<p><strong>@SpringBootApplication注解是最核心注解</strong></p>
+<p><code>@SpringBootApplication</code>看作是 <code>@Configuration</code>、<code>@EnableAutoConfiguration</code>、<code>@ComponentScan</code> 注解的集合。根据 SpringBoot 官网，这三个注解的作用分别是：</p>
+<ul>
+<li><code>@EnableAutoConfiguration</code>：启用 SpringBoot 的自动配置机制</li>
+<li><code>@Configuration</code>：允许在上下文中注册额外的 bean 或导入其他配置类</li>
+<li><code>@ComponentScan</code>： 扫描被<code>@Component</code> (<code>@Service</code>,<code>@Controller</code>)注解的 bean，注解默认会扫描启动类所在的包下所有的类 ，可以自定义不扫描某些 bean。</li>
+</ul>
+<p><strong><code>@EnableAutoConfiguration</code> 是实现自动装配的重要注解</strong></p>
+<p>自动装配核心功能的实现实际是通过 <code>AutoConfigurationImportSelector</code>类</p>
+<pre><code class="hljs JAVA"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AutoConfigurationImportSelector</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">DeferredImportSelector</span>, <span class="hljs-title">BeanClassLoaderAware</span>, <span class="hljs-title">ResourceLoaderAware</span>, <span class="hljs-title">BeanFactoryAware</span>, <span class="hljs-title">EnvironmentAware</span>, <span class="hljs-title">Ordered</span> </span>&#123;
+&#125; 
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">DeferredImportSelector</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ImportSelector</span> </span>&#123;
+&#125; 
+
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">ImportSelector</span> </span>&#123;   
+    String[] selectImports(AnnotationMetadata var1);
+&#125;</code></pre>
+
+<p>AutoConfigurationImportSelector 类实现了 ImportSelector接口，也就实现了这个接口中的 selectImports方法，该方法主要用于获取所有符合条件的类的全限定类名，这些类需要被加载到 IoC 容器中。</p>
+<pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String[] NO_IMPORTS = <span class="hljs-keyword">new</span> String[<span class="hljs-number">0</span>]; 
+<span class="hljs-keyword">public</span> String[] selectImports(AnnotationMetadata annotationMetadata) &#123;       
+  <span class="hljs-comment">// &lt;1&gt;.判断自动装配开关是否打开*        </span>
+  <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.isEnabled(annotationMetadata)) &#123;            
+    <span class="hljs-keyword">return</span> NO_IMPORTS;        
+  &#125; 
+  <span class="hljs-keyword">else</span> &#123;          
+  <span class="hljs-comment">//&lt;2&gt;.获取所有需要装配的bean*            </span>
+    AutoConfigurationMetadata autoConfigurationMetadata = AutoConfigurationMetadataLoader.loadMetadata(<span class="hljs-keyword">this</span>.beanClassLoader);       AutoConfigurationImportSelector.AutoConfigurationEntry autoConfigurationEntry
+        = <span class="hljs-keyword">this</span>.getAutoConfigurationEntry(autoConfigurationMetadata, annotationMetadata);            
+    <span class="hljs-keyword">return</span> StringUtils.toStringArray(autoConfigurationEntry.getConfigurations());        
+  &#125;    
+&#125;</code></pre>
+
+
+
+<pre><code class="hljs java">
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> AutoConfigurationEntry EMPTY_ENTRY = <span class="hljs-keyword">new</span> AutoConfigurationEntry();
+
+<span class="hljs-function">AutoConfigurationEntry <span class="hljs-title">getAutoConfigurationEntry</span><span class="hljs-params">(AutoConfigurationMetadata autoConfigurationMetadata, AnnotationMetadata annotationMetadata)</span> </span>&#123;
+    <span class="hljs-comment">//&lt;1&gt;.  是否开启自动装配</span>
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.isEnabled(annotationMetadata)) &#123;
+        <span class="hljs-keyword">return</span> EMPTY_ENTRY;
+    &#125; <span class="hljs-keyword">else</span> &#123;
+        <span class="hljs-comment">//&lt;2&gt;.用于获取EnableAutoConfiguration注解中的 exclude 和 excludeName。</span>
+        AnnotationAttributes attributes = <span class="hljs-keyword">this</span>.getAttributes(annotationMetadata);
+        <span class="hljs-comment">//&lt;3&gt;.获取需要自动装配的所有配置类，读取META-INF/spring.factories</span>
+        List&lt;String&gt; configurations = <span class="hljs-keyword">this</span>.getCandidateConfigurations(annotationMetadata, attributes);
+        <span class="hljs-comment">//&lt;4&gt;.这一步经历了一遍筛选，@ConditionalOnXXX 中的所有条件都满足，该类才会生效</span>
+        configurations = <span class="hljs-keyword">this</span>.removeDuplicates(configurations);
+        Set&lt;String&gt; exclusions = <span class="hljs-keyword">this</span>.getExclusions(annotationMetadata, attributes);
+        <span class="hljs-keyword">this</span>.checkExcludedClasses(configurations, exclusions);
+        configurations.removeAll(exclusions);
+        configurations = <span class="hljs-keyword">this</span>.filter(configurations, autoConfigurationMetadata);
+        <span class="hljs-keyword">this</span>.fireAutoConfigurationImportEvents(configurations, exclusions);
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> AutoConfigurationImportSelector.AutoConfigurationEntry(configurations, exclusions);
+    &#125;
+&#125;</code></pre>
+
+
+
+<div class="note note-success">
+            <p>@EnableAutoConfiguration注解是实现自动装配的重要注解。<code>AutoConfigurationImportSelector</code>类实现了自动装配的核心功能。其实现了 ImportSelector接口，获取了所有符合条件的类并将其加载到 IoC 容器中。其读取META-INF/spring.factories中的自动配置类，并筛除不满足各自@Conditional元注解的配置类</p>
+          </div>
+
+
+
+<h3 id="3-2-SpringBoot配置"><a href="#3-2-SpringBoot配置" class="headerlink" title="3.2 SpringBoot配置"></a>3.2 SpringBoot配置</h3><h4 id="yml配置"><a href="#yml配置" class="headerlink" title="yml配置"></a>yml配置</h4><p>在yml可以使用**@project.groupId@** 这样的格式来获取pom文件中的信息</p>
+<p>yml配置同样存在缺陷，官网上指明其不能支持@PropertySource，只能使用properties格式，即以下代码。此代码完成了从配置文件到entity的映射</p>
+<pre><code class="hljs java"><span class="hljs-meta">@Component</span>
+<span class="hljs-meta">@PropertySource(&quot;classpath:xxx.properties&quot;)</span>
+<span class="hljs-meta">@ConfigurationProperties(&quot;Student&quot;)</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span></span>&#123;
+&#125;</code></pre>
+
+<h4 id="类型安全的配置"><a href="#类型安全的配置" class="headerlink" title="类型安全的配置"></a>类型安全的配置</h4><p>@ConfigurationProperties 将properties属性和一个bean相关联</p>
+<h4 id="多环境配置Profile"><a href="#多环境配置Profile" class="headerlink" title="多环境配置Profile"></a>多环境配置Profile</h4><p>profile为在不同环境下使用不同的配置提供了支持</p>
+<p>@profile(“dev”) 手动控制配置文件。</p>
+<p>当你用两个不同profile配置实现类实现同一个接口时，容器也会根据当前环境调用不同impl</p>
+<p>同时也可以在java -jar中指定spring.profiles.active参数控制当前服务使用哪一种环境</p>
+<div class="note note-danger">
+            <p><strong>面试题——如何重新加载程序，而无需重启服务器：</strong> </p>
+          </div>
+
+<div class="note note-success">
+            <p>回答：</p><p>通过DEV工具实现。DEVTools模块将文件更改自动部署到服务器并自动重启，免去了手动重启的必要。在生产环境中被禁用。</p>
+          </div>
+
+
+
+<h3 id="3-3-SpringBoot应用"><a href="#3-3-SpringBoot应用" class="headerlink" title="3.3 SpringBoot应用"></a>3.3 SpringBoot应用</h3><h4 id="自定义异常页面"><a href="#自定义异常页面" class="headerlink" title="自定义异常页面"></a>自定义异常页面</h4><p>resource目录新建<span class="label label-danger">public/error</span>，创建404.html 500.html</p>
+<div class="note note-danger">
+            <p><strong>面试题——如何使用SpringBoot实现异常处理？</strong> </p>
+          </div>
+
+<div class="note note-success">
+            <p>Spring提供了一种使用ControllerAdvice处理异常的非常有用的方法。我们通过实现一个ControllerAdvice类，来处理控制器类抛出的所有异常</p>
+          </div>
+
+
+
+<h4 id="监视器-actuator"><a href="#监视器-actuator" class="headerlink" title="监视器 actuator"></a>监视器 actuator</h4><p>actuator可帮助您访问生产环境中正在运行的应用程序的当前状态。</p>
+<p>actuator模块公开了一组可直接访问的接口来监视状态。可在yml中进行如下简单配置</p>
+<pre><code class="hljs yaml"><span class="hljs-string">management：</span>
+  <span class="hljs-string">server：</span>
+    <span class="hljs-attr">port:</span> <span class="hljs-number">9999</span>
+    <span class="hljs-attr">servlet:</span>
+      <span class="hljs-attr">context-path:</span> <span class="hljs-string">/www</span>
+  <span class="hljs-attr">endpoints:</span>
+    <span class="hljs-attr">web:</span>
+      <span class="hljs-attr">base-path:</span> <span class="hljs-string">/base</span>
+      <span class="hljs-attr">exposure:</span>
+        <span class="hljs-attr">include:</span> <span class="hljs-string">&quot;*&quot;</span>   <span class="hljs-comment">#开启所有监控终端</span>
+        <span class="hljs-attr">exclude:</span> [<span class="hljs-string">&quot;env&quot;</span>, <span class="hljs-string">&quot;health&quot;</span>]  <span class="hljs-comment">#指定要关闭的端口</span></code></pre>
+
+<div class="note note-danger">
+            <p><strong>面试题——如何关闭监视器：</strong> </p>
+          </div>
+
+<div class="note note-success">
+            <p>回答：</p><p>默认情况下，所有敏感的HTTP端点都是安全的，只有具有ACTUATOR角色的用户才能访问它们。安全性是使用标准的HttpServletRequest.isUserInRole方法实施的。我们可以使用management.security.enabled=false来禁用安全性。只有在执行机构端点在防火墙后访问时，才建议禁用安全性</p>
+          </div>
+
+
+
+<h4 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h4><p>使用spring-boot-starter-security依赖项。配置类将必须扩展WebSecurityConfigurerAdapter并覆盖其方法。</p>
+<h4 id="使用Redis"><a href="#使用Redis" class="headerlink" title="使用Redis"></a>使用Redis</h4><p>高并发情况下的问题</p>
+<span class="label label-primary">**缓存雪崩**</span>
+
+<ul>
+<li>现象：某些缓存在同一时间集体到期失效，便会有可能引发缓存雪崩。</li>
+<li>解决：提前规划好所有缓存的到期时间避免集体失效、 定时刷新缓存、 设置缓存刷新标记</li>
+</ul>
+<span class="label label-primary">**缓存穿透**</span>
+
+<ul>
+<li>现象：越过redis直接访问数据库。从DB查询结果为null时有可能会发生。</li>
+<li>解决：为null的结果赋予一个默认值、布隆过滤器</li>
+</ul>
+<span class="label label-primary">**缓存击倒**</span>
+
+<ul>
+<li>现象：海量请求短时间内查询一个热点Key，直接服务器宕机</li>
+<li>解决：请求端的负载均衡，数据端的分表算法</li>
+</ul>
+<span class="label label-primary">**热点缓存**</span>
+
+<ul>
+<li>现象：大量请求查询一个热点Key，此key过期的瞬间来不及更新，导致大量请求直接访问数据库</li>
+<li>解决：双重检测锁</li>
+</ul>
+<pre><code class="hljs java"><span class="hljs-comment">// 双重检测锁伪代码</span>
+BoundValueOperations&lt;Object,Object&gt; ops = redisTemplate.boundValueOps(<span class="hljs-string">&quot;count&quot;</span>);
+Object count = ops.get();
+<span class="hljs-keyword">if</span>(count == <span class="hljs-keyword">null</span>) &#123;
+    <span class="hljs-comment">// 让2,3,4卡在这，等待一号存入redis，然后就不用再查数据库，直接命中redis了</span>
+    <span class="hljs-keyword">synchronized</span>(<span class="hljs-keyword">this</span>) &#123;
+        <span class="hljs-keyword">if</span>(count == <span class="hljs-keyword">null</span>) &#123;
+          <span class="hljs-comment">//查询DB</span>
+          count = dao.getValue();
+          <span class="hljs-comment">//存入redis</span>
+          ops.set(count, <span class="hljs-number">10</span>, TimeUnit.SECONDS);
+        &#125;
+    &#125;
+&#125; 
+<span class="hljs-keyword">return</span> count;
+</code></pre>
+
+<p>一看到双重检测锁，还是要想到线程安全性的。建议回看java专题多线程知识。</p>
+<p>但是这里不会出现线程安全，首先count是一个成员变量</p>
+<h3 id="3-4-springboot-WEB开发"><a href="#3-4-springboot-WEB开发" class="headerlink" title="3.4 springboot WEB开发"></a>3.4 springboot WEB开发</h3><h4 id="websocket"><a href="#websocket" class="headerlink" title="websocket"></a>websocket</h4><h3 id="3-5-springboot-数据访问"><a href="#3-5-springboot-数据访问" class="headerlink" title="3.5 springboot 数据访问"></a>3.5 springboot 数据访问</h3><h4 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h4><ul>
+<li>编程式事务管理</li>
+<li>声明式事务管理</li>
+</ul>
+<p>Spring 框架中，事务管理相关最重要的 3 个接口如下：</p>
+<ul>
+<li>**<code>PlatformTransactionManager</code>**： （平台）事务管理器，Spring 事务策略的核心。</li>
+</ul>
+<p>Spring 并不直接管理事务，而是提供了多种事务管理器。通过这个接口，Spring 为各个平台如 JDBC(<code>DataSourceTransactionManager</code>)、Hibernate(<code>HibernateTransactionManager</code>)、JPA(<code>JpaTransactionManager</code>)等都提供了对应的事务管理器，但是具体的实现就是各个平台自己的事情了。</p>
+<ul>
+<li>**<code>TransactionDefinition</code>**： 事务定义信息(事务隔离级别、传播行为、超时、只读、回滚规则)。</li>
+</ul>
+<p><img src="/img/transactionDefinition.png" srcset="/img/loading.gif"></p>
+<ul>
+<li>**<code>TransactionStatus</code>**： 事务运行状态。</li>
+</ul>
+<p><code>TransactionStatus</code>接口用来记录事务的状态 该接口定义了一组方法,用来获取或判断事务的相应状态信息。</p>
+<p><code>PlatformTransactionManager.getTransaction(…)</code>方法返回一个 <code>TransactionStatus</code> 对象。</p>
+<p><strong>事务属性详解</strong></p>
+<p>传播行为</p>
+<p>隔离级别</p>
+<p>超时属性</p>
+<p>只读属性</p>
+<p>回滚规则</p>
+<p><strong><code>@Transactional</code> 事务注解原理</strong></p>
+<p><code>@Transactional</code> 的工作机制是基于 AOP 实现的，AOP 又是使用动态代理实现的。如果目标对象实现了接口，默认情况下会采用 JDK 的动态代理，如果目标对象没有实现了接口,会使用 CGLIB 动态代理。</p>
+<p>如果一个类或者一个类中的 public 方法上被标注<code>@Transactional</code> 注解的话，Spring 容器就会在启动的时候为其创建一个代理类，在调用被<code>@Transactional</code> 注解的 public 方法的时候，实际调用的是，<code>TransactionInterceptor</code> 类中的 <code>invoke()</code>方法。这个方法的作用就是在目标方法之前开启事务，方法执行过程中如果遇到异常的时候回滚事务，方法调用完成之后提交事务。</p>
+<p><strong>@Transactional失效场景</strong></p>
+<p>①非public方法</p>
+<p>② rollbackFor 设置错误</p>
+<p>③同一个类中方法调用，导致@Transactional失效</p>
+<p>其实这还是由于使用Spring AOP代理造成的，因为只有当事务方法被当前类以外的代码调用时，才会由Spring生成的代理对象来管理。</p>
+<p>④异常被你的 catch“吃了”导致@Transactional失效</p>
+<p>⑤@Transactional 注解属性 propagation 设置错误</p>
+<h2 id="四、SpringBatch"><a href="#四、SpringBatch" class="headerlink" title="四、SpringBatch"></a>四、SpringBatch</h2><p>SpringBatch是处理大量数据的批处理框架</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><style>
+  /* 只设置  note字体 */
+  .note {
+    font-family: "Microsoft YaHei",Georgia, sans, serif, KaiTi,;
+    font-size: 14px;
+  }
+</style><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>Spring结构 <a target="_blank" rel="noopener" href="https://blog.csdn.net/ThinkWon/article/details/102810819">https://blog.csdn.net/ThinkWon/article/details/102810819</a>
+<p><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>Spring基础教程 <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/wkspring/1h9m1h9m.html">https://www.w3cschool.cn/wkspring/1h9m1h9m.html</a><br><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span>@Resource @Inject @Autowired <a target="_blank" rel="noopener" href="https://www.cnblogs.com/pjfmeng/p/7551340.html">https://www.cnblogs.com/pjfmeng/p/7551340.html</a><br><a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span>依赖注入 <a target="_blank" rel="noopener" href="https://blog.csdn.net/programmer_at/article/details/82389221">https://blog.csdn.net/programmer_at/article/details/82389221</a><br><a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span>很简洁的依赖注入 <a target="_blank" rel="noopener" href="https://www.rainng.com/field-injection-is-not-recommend/">https://www.rainng.com/field-injection-is-not-recommend/</a><br><a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:6" class="footnote-text"><span>Redis <a target="_blank" rel="noopener" href="https://blog.csdn.net/hanchao5272/article/details/99706189">https://blog.csdn.net/hanchao5272/article/details/99706189</a><br><a href="#fnref:6" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:7" class="footnote-text"><span>javaguide spring综合 <a target="_blank" rel="noopener" href="https://snailclimb.gitee.io/javaguide/#/docs/system-design/framework/spring/Spring%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93">https://snailclimb.gitee.io/javaguide/#/docs/system-design/framework/spring/Spring%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93</a><br><a href="#fnref:7" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:8" class="footnote-text"><span>过滤器和拦截器 <a target="_blank" rel="noopener" href="https://blog.csdn.net/heweimingming/article/details/79993591">https://blog.csdn.net/heweimingming/article/details/79993591</a><br><a href="#fnref:8" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/01/01/MyBatis/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">mybatis</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/01/mysql/">
+                        <span class="hidden-mobile">mysql</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "springboot&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
